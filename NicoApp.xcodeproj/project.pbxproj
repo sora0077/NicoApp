@@ -1,0 +1,2869 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02658DDD51C30512A24A3C56 /* Pods_NicoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0E3EC0F29F3964F02F1C2FF /* Pods_NicoApp.framework */; };
+		2EDB4AAAC8FE6C0DC539726C /* Pods_NicoAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F2236714DC4DE21811621DB /* Pods_NicoAPI.framework */; };
+		5C15A8D588603D13A493A7F7 /* Pods_NicoRepository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 201BA8D65B440C3FA1AFAB62 /* Pods_NicoRepository.framework */; };
+		C46CA02A4E49C5C2B222E726 /* Pods_NicoDomainImpl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B69A3331D715391C2E34D4B5 /* Pods_NicoDomainImpl.framework */; };
+		D9193B401C76144500EAA0CB /* WatchVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9193B3F1C76144500EAA0CB /* WatchVideo.swift */; };
+		D9193B421C761AA100EAA0CB /* GetSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9193B411C761AA100EAA0CB /* GetSession.swift */; };
+		D9193B441C761AD100EAA0CB /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9193B431C761AD100EAA0CB /* Session.swift */; };
+		D9193B471C78B5B900EAA0CB /* Flv.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9193B461C78B5B900EAA0CB /* Flv.swift */; };
+		D9193B491C78B65C00EAA0CB /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9193B481C78B65C00EAA0CB /* Video.swift */; };
+		D9193B4B1C78B68500EAA0CB /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9193B4A1C78B68500EAA0CB /* Session.swift */; };
+		D9193B741C79410F00EAA0CB /* GetRanking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9193B731C79410F00EAA0CB /* GetRanking.swift */; };
+		D94BA5121C709A72007A66E2 /* VideoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94BA5111C709A72007A66E2 /* VideoRepository.swift */; };
+		D94BA5131C709B5F007A66E2 /* NicoEntity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95634111C702C9500550C70 /* NicoEntity.framework */; };
+		D94BA5161C70A032007A66E2 /* NicoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94BA5151C70A032007A66E2 /* NicoAPI.swift */; };
+		D95633DF1C702C7A00550C70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95633DE1C702C7A00550C70 /* AppDelegate.swift */; };
+		D95633E11C702C7A00550C70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95633E01C702C7A00550C70 /* ViewController.swift */; };
+		D95633E41C702C7A00550C70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D95633E21C702C7A00550C70 /* Main.storyboard */; };
+		D95633E61C702C7A00550C70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D95633E51C702C7A00550C70 /* Assets.xcassets */; };
+		D95633E91C702C7A00550C70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D95633E71C702C7A00550C70 /* LaunchScreen.storyboard */; };
+		D95633F41C702C7A00550C70 /* NicoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95633F31C702C7A00550C70 /* NicoAppTests.swift */; };
+		D95633FF1C702C7A00550C70 /* NicoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95633FE1C702C7A00550C70 /* NicoAppUITests.swift */; };
+		D95634141C702C9500550C70 /* NicoEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = D95634131C702C9500550C70 /* NicoEntity.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D956341B1C702C9500550C70 /* NicoEntity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95634111C702C9500550C70 /* NicoEntity.framework */; };
+		D95634221C702C9500550C70 /* NicoEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95634211C702C9500550C70 /* NicoEntityTests.swift */; };
+		D95634261C702C9500550C70 /* NicoEntity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95634111C702C9500550C70 /* NicoEntity.framework */; };
+		D95634271C702C9500550C70 /* NicoEntity.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D95634111C702C9500550C70 /* NicoEntity.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D95634371C702C9F00550C70 /* NicoAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = D95634361C702C9F00550C70 /* NicoAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D956343E1C702CA000550C70 /* NicoAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95634341C702C9F00550C70 /* NicoAPI.framework */; };
+		D95634451C702CA000550C70 /* NicoAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95634441C702CA000550C70 /* NicoAPITests.swift */; };
+		D95634491C702CA000550C70 /* NicoAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95634341C702C9F00550C70 /* NicoAPI.framework */; };
+		D956344A1C702CA000550C70 /* NicoAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D95634341C702C9F00550C70 /* NicoAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D95634591C702CB800550C70 /* NicoRepository.h in Headers */ = {isa = PBXBuildFile; fileRef = D95634581C702CB800550C70 /* NicoRepository.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D95634601C702CB800550C70 /* NicoRepository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95634561C702CB800550C70 /* NicoRepository.framework */; };
+		D95634671C702CB800550C70 /* NicoRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95634661C702CB800550C70 /* NicoRepositoryTests.swift */; };
+		D956346B1C702CB800550C70 /* NicoRepository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95634561C702CB800550C70 /* NicoRepository.framework */; };
+		D956346C1C702CB800550C70 /* NicoRepository.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D95634561C702CB800550C70 /* NicoRepository.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D956347B1C702CC100550C70 /* NicoDomain.h in Headers */ = {isa = PBXBuildFile; fileRef = D956347A1C702CC100550C70 /* NicoDomain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D95634821C702CC100550C70 /* NicoDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95634781C702CC100550C70 /* NicoDomain.framework */; };
+		D95634891C702CC100550C70 /* NicoDomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95634881C702CC100550C70 /* NicoDomainTests.swift */; };
+		D956348D1C702CC100550C70 /* NicoDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95634781C702CC100550C70 /* NicoDomain.framework */; };
+		D956348E1C702CC100550C70 /* NicoDomain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D95634781C702CC100550C70 /* NicoDomain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D95634951C702D0700550C70 /* NicoEntity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95634111C702C9500550C70 /* NicoEntity.framework */; };
+		D956349A1C702D9B00550C70 /* Flv.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95634981C702D9B00550C70 /* Flv.swift */; };
+		D956349B1C702D9B00550C70 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95634991C702D9B00550C70 /* Video.swift */; };
+		D95634A41C702DFD00550C70 /* NicoDomainImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = D95634A31C702DFD00550C70 /* NicoDomainImpl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D95634AB1C702DFD00550C70 /* NicoDomainImpl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95634A11C702DFD00550C70 /* NicoDomainImpl.framework */; };
+		D95634B21C702DFD00550C70 /* NicoDomainImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95634B11C702DFD00550C70 /* NicoDomainImplTests.swift */; };
+		D95634B61C702DFD00550C70 /* NicoDomainImpl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95634A11C702DFD00550C70 /* NicoDomainImpl.framework */; };
+		D95634B71C702DFD00550C70 /* NicoDomainImpl.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D95634A11C702DFD00550C70 /* NicoDomainImpl.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D95634C61C702E0600550C70 /* NicoRepositoryImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = D95634C51C702E0600550C70 /* NicoRepositoryImpl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D95634CD1C702E0700550C70 /* NicoRepositoryImpl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95634C31C702E0600550C70 /* NicoRepositoryImpl.framework */; };
+		D95634D41C702E0700550C70 /* NicoRepositoryImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95634D31C702E0700550C70 /* NicoRepositoryImplTests.swift */; };
+		D95634D81C702E0700550C70 /* NicoRepositoryImpl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95634C31C702E0600550C70 /* NicoRepositoryImpl.framework */; };
+		D95634D91C702E0700550C70 /* NicoRepositoryImpl.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D95634C31C702E0600550C70 /* NicoRepositoryImpl.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D95634E81C702E1800550C70 /* NicoEnvironment.h in Headers */ = {isa = PBXBuildFile; fileRef = D95634E71C702E1800550C70 /* NicoEnvironment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D95634EF1C702E1800550C70 /* NicoEnvironment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95634E51C702E1800550C70 /* NicoEnvironment.framework */; };
+		D95634F61C702E1800550C70 /* NicoEnvironmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95634F51C702E1800550C70 /* NicoEnvironmentTests.swift */; };
+		D95634FA1C702E1800550C70 /* NicoEnvironment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95634E51C702E1800550C70 /* NicoEnvironment.framework */; };
+		D95634FB1C702E1800550C70 /* NicoEnvironment.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D95634E51C702E1800550C70 /* NicoEnvironment.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D95635021C702E3300550C70 /* NicoDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95634781C702CC100550C70 /* NicoDomain.framework */; };
+		D956350B1C70681200550C70 /* GetFlv.swift in Sources */ = {isa = PBXBuildFile; fileRef = D956350A1C70681200550C70 /* GetFlv.swift */; };
+		D956350D1C706AD000550C70 /* NicoAPIRequestToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = D956350C1C706AD000550C70 /* NicoAPIRequestToken.swift */; };
+		D956350F1C706BB500550C70 /* NicoAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D956350E1C706BB500550C70 /* NicoAPIError.swift */; };
+		D974D1341C8AE89C0090ADBB /* PaginationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D974D1331C8AE89C0090ADBB /* PaginationResponse.swift */; };
+		D98F06731C8B44600037D7A9 /* RankingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98F06721C8B44600037D7A9 /* RankingRepository.swift */; };
+		D98F06751C8C41B90037D7A9 /* SessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98F06741C8C41B90037D7A9 /* SessionRepository.swift */; };
+		D9B1F5171C73795600F62FB5 /* NicoRepository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95634561C702CB800550C70 /* NicoRepository.framework */; };
+		D9B1F51D1C7379AA00F62FB5 /* NicoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B1F51C1C7379AA00F62FB5 /* NicoRepository.swift */; };
+		D9B1F51F1C73805F00F62FB5 /* NicoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B1F51E1C73805F00F62FB5 /* NicoEntity.swift */; };
+		D9C02E211CA2DBF90023DE2D /* RefRanking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C02E201CA2DBF90023DE2D /* RefRanking.swift */; };
+		D9C02E241CA2EDD60023DE2D /* RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C02E231CA2EDD60023DE2D /* RxSwift.swift */; };
+		D9C85CA01C708E130087EF64 /* GetThumbInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C85C9F1C708E130087EF64 /* GetThumbInfo.swift */; };
+		D9CF2FBE1CA188A60079F83D /* NicoRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CF2FBD1CA188A60079F83D /* NicoRepositoryImpl.swift */; };
+		D9CF2FC01CA189900079F83D /* RankingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CF2FBF1CA189900079F83D /* RankingRepository.swift */; };
+		D9CF2FC21CA18C740079F83D /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CF2FC11CA18C740079F83D /* Repository.swift */; };
+		D9CF2FC41CA18F7C0079F83D /* NicoDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CF2FC31CA18F7C0079F83D /* NicoDomain.swift */; };
+		D9CF2FC61CA190E10079F83D /* Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CF2FC51CA190E10079F83D /* Domain.swift */; };
+		D9CF2FC71CA193680079F83D /* NicoAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95634341C702C9F00550C70 /* NicoAPI.framework */; };
+		D9CF2FC81CA1938A0079F83D /* NicoAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95634341C702C9F00550C70 /* NicoAPI.framework */; };
+		D9CF2FC91CA193CB0079F83D /* NicoRepository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95634561C702CB800550C70 /* NicoRepository.framework */; };
+		D9CF2FCA1CA193D00079F83D /* NicoAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95634341C702C9F00550C70 /* NicoAPI.framework */; };
+		D9E363E91CA41F9E00BB4719 /* SessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E363E81CA41F9E00BB4719 /* SessionRepository.swift */; };
+		E8CFABA8ACE6388157F3DE6A /* Pods_NicoEntity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7AC8A83BCC3ECB8274F5023 /* Pods_NicoEntity.framework */; };
+		EABD65DB6B75D9E211CF1403 /* Pods_NicoDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7863330B063160D7B0B44D /* Pods_NicoDomain.framework */; };
+		EF55A28FE1FC1A6AD0487618 /* Pods_NicoRepositoryImpl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 999A6DDFA1F04BADC0AF2C43 /* Pods_NicoRepositoryImpl.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D95633F01C702C7A00550C70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D95633D31C702C7A00550C70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D95633DA1C702C7A00550C70;
+			remoteInfo = NicoApp;
+		};
+		D95633FB1C702C7A00550C70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D95633D31C702C7A00550C70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D95633DA1C702C7A00550C70;
+			remoteInfo = NicoApp;
+		};
+		D956341C1C702C9500550C70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D95633D31C702C7A00550C70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D95634101C702C9500550C70;
+			remoteInfo = NicoEntity;
+		};
+		D956341E1C702C9500550C70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D95633D31C702C7A00550C70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D95633DA1C702C7A00550C70;
+			remoteInfo = NicoApp;
+		};
+		D95634241C702C9500550C70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D95633D31C702C7A00550C70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D95634101C702C9500550C70;
+			remoteInfo = NicoEntity;
+		};
+		D956343F1C702CA000550C70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D95633D31C702C7A00550C70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D95634331C702C9F00550C70;
+			remoteInfo = NicoAPI;
+		};
+		D95634411C702CA000550C70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D95633D31C702C7A00550C70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D95633DA1C702C7A00550C70;
+			remoteInfo = NicoApp;
+		};
+		D95634471C702CA000550C70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D95633D31C702C7A00550C70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D95634331C702C9F00550C70;
+			remoteInfo = NicoAPI;
+		};
+		D95634611C702CB800550C70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D95633D31C702C7A00550C70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D95634551C702CB800550C70;
+			remoteInfo = NicoRepository;
+		};
+		D95634631C702CB800550C70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D95633D31C702C7A00550C70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D95633DA1C702C7A00550C70;
+			remoteInfo = NicoApp;
+		};
+		D95634691C702CB800550C70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D95633D31C702C7A00550C70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D95634551C702CB800550C70;
+			remoteInfo = NicoRepository;
+		};
+		D95634831C702CC100550C70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D95633D31C702C7A00550C70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D95634771C702CC100550C70;
+			remoteInfo = NicoDomain;
+		};
+		D95634851C702CC100550C70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D95633D31C702C7A00550C70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D95633DA1C702C7A00550C70;
+			remoteInfo = NicoApp;
+		};
+		D956348B1C702CC100550C70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D95633D31C702C7A00550C70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D95634771C702CC100550C70;
+			remoteInfo = NicoDomain;
+		};
+		D95634AC1C702DFD00550C70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D95633D31C702C7A00550C70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D95634A01C702DFD00550C70;
+			remoteInfo = NicoDomainImpl;
+		};
+		D95634AE1C702DFD00550C70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D95633D31C702C7A00550C70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D95633DA1C702C7A00550C70;
+			remoteInfo = NicoApp;
+		};
+		D95634B41C702DFD00550C70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D95633D31C702C7A00550C70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D95634A01C702DFD00550C70;
+			remoteInfo = NicoDomainImpl;
+		};
+		D95634CE1C702E0700550C70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D95633D31C702C7A00550C70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D95634C21C702E0600550C70;
+			remoteInfo = NicoRepositoryImpl;
+		};
+		D95634D01C702E0700550C70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D95633D31C702C7A00550C70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D95633DA1C702C7A00550C70;
+			remoteInfo = NicoApp;
+		};
+		D95634D61C702E0700550C70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D95633D31C702C7A00550C70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D95634C21C702E0600550C70;
+			remoteInfo = NicoRepositoryImpl;
+		};
+		D95634F01C702E1800550C70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D95633D31C702C7A00550C70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D95634E41C702E1800550C70;
+			remoteInfo = NicoEnvironment;
+		};
+		D95634F21C702E1800550C70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D95633D31C702C7A00550C70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D95633DA1C702C7A00550C70;
+			remoteInfo = NicoApp;
+		};
+		D95634F81C702E1800550C70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D95633D31C702C7A00550C70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D95634E41C702E1800550C70;
+			remoteInfo = NicoEnvironment;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D956342B1C702C9500550C70 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D956344A1C702CA000550C70 /* NicoAPI.framework in Embed Frameworks */,
+				D956348E1C702CC100550C70 /* NicoDomain.framework in Embed Frameworks */,
+				D95634B71C702DFD00550C70 /* NicoDomainImpl.framework in Embed Frameworks */,
+				D95634D91C702E0700550C70 /* NicoRepositoryImpl.framework in Embed Frameworks */,
+				D95634271C702C9500550C70 /* NicoEntity.framework in Embed Frameworks */,
+				D956346C1C702CB800550C70 /* NicoRepository.framework in Embed Frameworks */,
+				D95634FB1C702E1800550C70 /* NicoEnvironment.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		04B3A6782CB9AA21D14E2B92 /* Pods-NicoAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NicoAPI.release.xcconfig"; path = "Pods/Target Support Files/Pods-NicoAPI/Pods-NicoAPI.release.xcconfig"; sourceTree = "<group>"; };
+		06D78134DDBFBF2D56ECC946 /* Pods-NicoRepositoryImpl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NicoRepositoryImpl.release.xcconfig"; path = "Pods/Target Support Files/Pods-NicoRepositoryImpl/Pods-NicoRepositoryImpl.release.xcconfig"; sourceTree = "<group>"; };
+		08AE78E56A8A01FD90ACEB31 /* Pods-NicoAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NicoAPI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NicoAPI/Pods-NicoAPI.debug.xcconfig"; sourceTree = "<group>"; };
+		1B41FB23099CACC31A509CF6 /* Pods-NicoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NicoApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-NicoApp/Pods-NicoApp.release.xcconfig"; sourceTree = "<group>"; };
+		201BA8D65B440C3FA1AFAB62 /* Pods_NicoRepository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NicoRepository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		23DBB58EA8C0F3DE5F70FEA4 /* Pods-NicoDomain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NicoDomain.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NicoDomain/Pods-NicoDomain.debug.xcconfig"; sourceTree = "<group>"; };
+		26FE31B661829303DE1B7714 /* Pods-NicoDomain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NicoDomain.release.xcconfig"; path = "Pods/Target Support Files/Pods-NicoDomain/Pods-NicoDomain.release.xcconfig"; sourceTree = "<group>"; };
+		4F2236714DC4DE21811621DB /* Pods_NicoAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NicoAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5238E188FFC6A12670EDBAC2 /* Pods-NicoRepositoryImpl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NicoRepositoryImpl.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NicoRepositoryImpl/Pods-NicoRepositoryImpl.debug.xcconfig"; sourceTree = "<group>"; };
+		528730C1E6C4D509F6E9CAAE /* Pods-NicoEntity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NicoEntity.release.xcconfig"; path = "Pods/Target Support Files/Pods-NicoEntity/Pods-NicoEntity.release.xcconfig"; sourceTree = "<group>"; };
+		7DAA736AF15D063D122D847A /* Pods-NicoDomainImpl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NicoDomainImpl.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NicoDomainImpl/Pods-NicoDomainImpl.debug.xcconfig"; sourceTree = "<group>"; };
+		7FDC036C83A8B98C405B588E /* Pods-NicoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NicoApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NicoApp/Pods-NicoApp.debug.xcconfig"; sourceTree = "<group>"; };
+		8340B5CADE3CCFA79020FBB4 /* Pods-NicoRepository.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NicoRepository.release.xcconfig"; path = "Pods/Target Support Files/Pods-NicoRepository/Pods-NicoRepository.release.xcconfig"; sourceTree = "<group>"; };
+		999A6DDFA1F04BADC0AF2C43 /* Pods_NicoRepositoryImpl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NicoRepositoryImpl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B69A3331D715391C2E34D4B5 /* Pods_NicoDomainImpl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NicoDomainImpl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA7863330B063160D7B0B44D /* Pods_NicoDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NicoDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2E9F4710176B54607F14ED5 /* Pods-NicoEntity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NicoEntity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NicoEntity/Pods-NicoEntity.debug.xcconfig"; sourceTree = "<group>"; };
+		D9193B3F1C76144500EAA0CB /* WatchVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchVideo.swift; sourceTree = "<group>"; };
+		D9193B411C761AA100EAA0CB /* GetSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetSession.swift; sourceTree = "<group>"; };
+		D9193B431C761AD100EAA0CB /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		D9193B461C78B5B900EAA0CB /* Flv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flv.swift; sourceTree = "<group>"; };
+		D9193B481C78B65C00EAA0CB /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		D9193B4A1C78B68500EAA0CB /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		D9193B731C79410F00EAA0CB /* GetRanking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRanking.swift; sourceTree = "<group>"; };
+		D94BA5111C709A72007A66E2 /* VideoRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoRepository.swift; sourceTree = "<group>"; };
+		D94BA5151C70A032007A66E2 /* NicoAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NicoAPI.swift; sourceTree = "<group>"; };
+		D95633DB1C702C7A00550C70 /* NicoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NicoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D95633DE1C702C7A00550C70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D95633E01C702C7A00550C70 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D95633E31C702C7A00550C70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D95633E51C702C7A00550C70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D95633E81C702C7A00550C70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D95633EA1C702C7A00550C70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D95633EF1C702C7A00550C70 /* NicoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NicoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D95633F31C702C7A00550C70 /* NicoAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicoAppTests.swift; sourceTree = "<group>"; };
+		D95633F51C702C7A00550C70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D95633FA1C702C7A00550C70 /* NicoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NicoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D95633FE1C702C7A00550C70 /* NicoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicoAppUITests.swift; sourceTree = "<group>"; };
+		D95634001C702C7A00550C70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D95634111C702C9500550C70 /* NicoEntity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NicoEntity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D95634131C702C9500550C70 /* NicoEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NicoEntity.h; sourceTree = "<group>"; };
+		D95634151C702C9500550C70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D956341A1C702C9500550C70 /* NicoEntityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NicoEntityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D95634211C702C9500550C70 /* NicoEntityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicoEntityTests.swift; sourceTree = "<group>"; };
+		D95634231C702C9500550C70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D95634341C702C9F00550C70 /* NicoAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NicoAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D95634361C702C9F00550C70 /* NicoAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NicoAPI.h; sourceTree = "<group>"; };
+		D95634381C702C9F00550C70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D956343D1C702CA000550C70 /* NicoAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NicoAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D95634441C702CA000550C70 /* NicoAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicoAPITests.swift; sourceTree = "<group>"; };
+		D95634461C702CA000550C70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D95634561C702CB800550C70 /* NicoRepository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NicoRepository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D95634581C702CB800550C70 /* NicoRepository.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NicoRepository.h; sourceTree = "<group>"; };
+		D956345A1C702CB800550C70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D956345F1C702CB800550C70 /* NicoRepositoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NicoRepositoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D95634661C702CB800550C70 /* NicoRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicoRepositoryTests.swift; sourceTree = "<group>"; };
+		D95634681C702CB800550C70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D95634781C702CC100550C70 /* NicoDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NicoDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D956347A1C702CC100550C70 /* NicoDomain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NicoDomain.h; sourceTree = "<group>"; };
+		D956347C1C702CC100550C70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D95634811C702CC100550C70 /* NicoDomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NicoDomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D95634881C702CC100550C70 /* NicoDomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicoDomainTests.swift; sourceTree = "<group>"; };
+		D956348A1C702CC100550C70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D95634981C702D9B00550C70 /* Flv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flv.swift; sourceTree = "<group>"; };
+		D95634991C702D9B00550C70 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		D95634A11C702DFD00550C70 /* NicoDomainImpl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NicoDomainImpl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D95634A31C702DFD00550C70 /* NicoDomainImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NicoDomainImpl.h; sourceTree = "<group>"; };
+		D95634A51C702DFD00550C70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D95634AA1C702DFD00550C70 /* NicoDomainImplTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NicoDomainImplTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D95634B11C702DFD00550C70 /* NicoDomainImplTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicoDomainImplTests.swift; sourceTree = "<group>"; };
+		D95634B31C702DFD00550C70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D95634C31C702E0600550C70 /* NicoRepositoryImpl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NicoRepositoryImpl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D95634C51C702E0600550C70 /* NicoRepositoryImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NicoRepositoryImpl.h; sourceTree = "<group>"; };
+		D95634C71C702E0700550C70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D95634CC1C702E0700550C70 /* NicoRepositoryImplTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NicoRepositoryImplTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D95634D31C702E0700550C70 /* NicoRepositoryImplTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicoRepositoryImplTests.swift; sourceTree = "<group>"; };
+		D95634D51C702E0700550C70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D95634E51C702E1800550C70 /* NicoEnvironment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NicoEnvironment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D95634E71C702E1800550C70 /* NicoEnvironment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NicoEnvironment.h; sourceTree = "<group>"; };
+		D95634E91C702E1800550C70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D95634EE1C702E1800550C70 /* NicoEnvironmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NicoEnvironmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D95634F51C702E1800550C70 /* NicoEnvironmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicoEnvironmentTests.swift; sourceTree = "<group>"; };
+		D95634F71C702E1800550C70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D956350A1C70681200550C70 /* GetFlv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetFlv.swift; sourceTree = "<group>"; };
+		D956350C1C706AD000550C70 /* NicoAPIRequestToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NicoAPIRequestToken.swift; sourceTree = "<group>"; };
+		D956350E1C706BB500550C70 /* NicoAPIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NicoAPIError.swift; sourceTree = "<group>"; };
+		D974D1331C8AE89C0090ADBB /* PaginationResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaginationResponse.swift; sourceTree = "<group>"; };
+		D98F06721C8B44600037D7A9 /* RankingRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingRepository.swift; sourceTree = "<group>"; };
+		D98F06741C8C41B90037D7A9 /* SessionRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionRepository.swift; sourceTree = "<group>"; };
+		D9B1F51C1C7379AA00F62FB5 /* NicoRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NicoRepository.swift; sourceTree = "<group>"; };
+		D9B1F51E1C73805F00F62FB5 /* NicoEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NicoEntity.swift; sourceTree = "<group>"; };
+		D9C02E201CA2DBF90023DE2D /* RefRanking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefRanking.swift; sourceTree = "<group>"; };
+		D9C02E231CA2EDD60023DE2D /* RxSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxSwift.swift; sourceTree = "<group>"; };
+		D9C85C9F1C708E130087EF64 /* GetThumbInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetThumbInfo.swift; sourceTree = "<group>"; };
+		D9CF2FBD1CA188A60079F83D /* NicoRepositoryImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NicoRepositoryImpl.swift; sourceTree = "<group>"; };
+		D9CF2FBF1CA189900079F83D /* RankingRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingRepository.swift; sourceTree = "<group>"; };
+		D9CF2FC11CA18C740079F83D /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		D9CF2FC31CA18F7C0079F83D /* NicoDomain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NicoDomain.swift; sourceTree = "<group>"; };
+		D9CF2FC51CA190E10079F83D /* Domain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Domain.swift; sourceTree = "<group>"; };
+		D9E363E81CA41F9E00BB4719 /* SessionRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionRepository.swift; sourceTree = "<group>"; };
+		E0E3EC0F29F3964F02F1C2FF /* Pods_NicoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NicoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAC9877E6761A1550D97E29F /* Pods-NicoDomainImpl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NicoDomainImpl.release.xcconfig"; path = "Pods/Target Support Files/Pods-NicoDomainImpl/Pods-NicoDomainImpl.release.xcconfig"; sourceTree = "<group>"; };
+		F1E6E4FAACC68E16E3D07F15 /* Pods-NicoRepository.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NicoRepository.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NicoRepository/Pods-NicoRepository.debug.xcconfig"; sourceTree = "<group>"; };
+		F7AC8A83BCC3ECB8274F5023 /* Pods_NicoEntity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NicoEntity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D95633D81C702C7A00550C70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D95634491C702CA000550C70 /* NicoAPI.framework in Frameworks */,
+				D956348D1C702CC100550C70 /* NicoDomain.framework in Frameworks */,
+				D95634B61C702DFD00550C70 /* NicoDomainImpl.framework in Frameworks */,
+				D95634D81C702E0700550C70 /* NicoRepositoryImpl.framework in Frameworks */,
+				D95634261C702C9500550C70 /* NicoEntity.framework in Frameworks */,
+				D956346B1C702CB800550C70 /* NicoRepository.framework in Frameworks */,
+				D95634FA1C702E1800550C70 /* NicoEnvironment.framework in Frameworks */,
+				02658DDD51C30512A24A3C56 /* Pods_NicoApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95633EC1C702C7A00550C70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95633F71C702C7A00550C70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D956340D1C702C9500550C70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8CFABA8ACE6388157F3DE6A /* Pods_NicoEntity.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95634171C702C9500550C70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D956341B1C702C9500550C70 /* NicoEntity.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95634301C702C9F00550C70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D95634951C702D0700550C70 /* NicoEntity.framework in Frameworks */,
+				2EDB4AAAC8FE6C0DC539726C /* Pods_NicoAPI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D956343A1C702CA000550C70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D956343E1C702CA000550C70 /* NicoAPI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95634521C702CB800550C70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9CF2FC71CA193680079F83D /* NicoAPI.framework in Frameworks */,
+				5C15A8D588603D13A493A7F7 /* Pods_NicoRepository.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D956345C1C702CB800550C70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D95634601C702CB800550C70 /* NicoRepository.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95634741C702CC100550C70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9CF2FCA1CA193D00079F83D /* NicoAPI.framework in Frameworks */,
+				D9CF2FC91CA193CB0079F83D /* NicoRepository.framework in Frameworks */,
+				EABD65DB6B75D9E211CF1403 /* Pods_NicoDomain.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D956347E1C702CC100550C70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D95634821C702CC100550C70 /* NicoDomain.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D956349D1C702DFD00550C70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D95635021C702E3300550C70 /* NicoDomain.framework in Frameworks */,
+				C46CA02A4E49C5C2B222E726 /* Pods_NicoDomainImpl.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95634A71C702DFD00550C70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D95634AB1C702DFD00550C70 /* NicoDomainImpl.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95634BF1C702E0600550C70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9CF2FC81CA1938A0079F83D /* NicoAPI.framework in Frameworks */,
+				D9B1F5171C73795600F62FB5 /* NicoRepository.framework in Frameworks */,
+				D94BA5131C709B5F007A66E2 /* NicoEntity.framework in Frameworks */,
+				EF55A28FE1FC1A6AD0487618 /* Pods_NicoRepositoryImpl.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95634C91C702E0700550C70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D95634CD1C702E0700550C70 /* NicoRepositoryImpl.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95634E11C702E1800550C70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95634EB1C702E1800550C70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D95634EF1C702E1800550C70 /* NicoEnvironment.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		995241499AF765F596A1C3C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F2236714DC4DE21811621DB /* Pods_NicoAPI.framework */,
+				201BA8D65B440C3FA1AFAB62 /* Pods_NicoRepository.framework */,
+				999A6DDFA1F04BADC0AF2C43 /* Pods_NicoRepositoryImpl.framework */,
+				F7AC8A83BCC3ECB8274F5023 /* Pods_NicoEntity.framework */,
+				E0E3EC0F29F3964F02F1C2FF /* Pods_NicoApp.framework */,
+				B69A3331D715391C2E34D4B5 /* Pods_NicoDomainImpl.framework */,
+				BA7863330B063160D7B0B44D /* Pods_NicoDomain.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB2630EF7A05A07B91A28BA1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				08AE78E56A8A01FD90ACEB31 /* Pods-NicoAPI.debug.xcconfig */,
+				04B3A6782CB9AA21D14E2B92 /* Pods-NicoAPI.release.xcconfig */,
+				F1E6E4FAACC68E16E3D07F15 /* Pods-NicoRepository.debug.xcconfig */,
+				8340B5CADE3CCFA79020FBB4 /* Pods-NicoRepository.release.xcconfig */,
+				5238E188FFC6A12670EDBAC2 /* Pods-NicoRepositoryImpl.debug.xcconfig */,
+				06D78134DDBFBF2D56ECC946 /* Pods-NicoRepositoryImpl.release.xcconfig */,
+				D2E9F4710176B54607F14ED5 /* Pods-NicoEntity.debug.xcconfig */,
+				528730C1E6C4D509F6E9CAAE /* Pods-NicoEntity.release.xcconfig */,
+				7FDC036C83A8B98C405B588E /* Pods-NicoApp.debug.xcconfig */,
+				1B41FB23099CACC31A509CF6 /* Pods-NicoApp.release.xcconfig */,
+				7DAA736AF15D063D122D847A /* Pods-NicoDomainImpl.debug.xcconfig */,
+				EAC9877E6761A1550D97E29F /* Pods-NicoDomainImpl.release.xcconfig */,
+				23DBB58EA8C0F3DE5F70FEA4 /* Pods-NicoDomain.debug.xcconfig */,
+				26FE31B661829303DE1B7714 /* Pods-NicoDomain.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D9193B451C78B5A800EAA0CB /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D9193B461C78B5B900EAA0CB /* Flv.swift */,
+				D9193B481C78B65C00EAA0CB /* Video.swift */,
+				D9193B4A1C78B68500EAA0CB /* Session.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		D9418E931CA42FCC00B5379D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D9418E951CA4311800B5379D /* RankingListView */,
+				D9418E941CA42FE800B5379D /* EntryPointView */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D9418E941CA42FE800B5379D /* EntryPointView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = EntryPointView;
+			sourceTree = "<group>";
+		};
+		D9418E951CA4311800B5379D /* RankingListView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RankingListView;
+			sourceTree = "<group>";
+		};
+		D95633D21C702C7A00550C70 = {
+			isa = PBXGroup;
+			children = (
+				D95633DD1C702C7A00550C70 /* NicoApp */,
+				D95633F21C702C7A00550C70 /* NicoAppTests */,
+				D95633FD1C702C7A00550C70 /* NicoAppUITests */,
+				D95634121C702C9500550C70 /* NicoEntity */,
+				D95634201C702C9500550C70 /* NicoEntityTests */,
+				D95634351C702C9F00550C70 /* NicoAPI */,
+				D95634431C702CA000550C70 /* NicoAPITests */,
+				D95634571C702CB800550C70 /* NicoRepository */,
+				D95634651C702CB800550C70 /* NicoRepositoryTests */,
+				D95634C41C702E0600550C70 /* NicoRepositoryImpl */,
+				D95634D21C702E0700550C70 /* NicoRepositoryImplTests */,
+				D95634791C702CC100550C70 /* NicoDomain */,
+				D95634871C702CC100550C70 /* NicoDomainTests */,
+				D95634A21C702DFD00550C70 /* NicoDomainImpl */,
+				D95634B01C702DFD00550C70 /* NicoDomainImplTests */,
+				D95634E61C702E1800550C70 /* NicoEnvironment */,
+				D95634F41C702E1800550C70 /* NicoEnvironmentTests */,
+				D95633DC1C702C7A00550C70 /* Products */,
+				AB2630EF7A05A07B91A28BA1 /* Pods */,
+				995241499AF765F596A1C3C6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D95633DC1C702C7A00550C70 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D95633DB1C702C7A00550C70 /* NicoApp.app */,
+				D95633EF1C702C7A00550C70 /* NicoAppTests.xctest */,
+				D95633FA1C702C7A00550C70 /* NicoAppUITests.xctest */,
+				D95634111C702C9500550C70 /* NicoEntity.framework */,
+				D956341A1C702C9500550C70 /* NicoEntityTests.xctest */,
+				D95634341C702C9F00550C70 /* NicoAPI.framework */,
+				D956343D1C702CA000550C70 /* NicoAPITests.xctest */,
+				D95634561C702CB800550C70 /* NicoRepository.framework */,
+				D956345F1C702CB800550C70 /* NicoRepositoryTests.xctest */,
+				D95634781C702CC100550C70 /* NicoDomain.framework */,
+				D95634811C702CC100550C70 /* NicoDomainTests.xctest */,
+				D95634A11C702DFD00550C70 /* NicoDomainImpl.framework */,
+				D95634AA1C702DFD00550C70 /* NicoDomainImplTests.xctest */,
+				D95634C31C702E0600550C70 /* NicoRepositoryImpl.framework */,
+				D95634CC1C702E0700550C70 /* NicoRepositoryImplTests.xctest */,
+				D95634E51C702E1800550C70 /* NicoEnvironment.framework */,
+				D95634EE1C702E1800550C70 /* NicoEnvironmentTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D95633DD1C702C7A00550C70 /* NicoApp */ = {
+			isa = PBXGroup;
+			children = (
+				D9E363EA1CA42C6400BB4719 /* Sources */,
+				D95633DE1C702C7A00550C70 /* AppDelegate.swift */,
+				D95633E01C702C7A00550C70 /* ViewController.swift */,
+				D95633E21C702C7A00550C70 /* Main.storyboard */,
+				D95633E51C702C7A00550C70 /* Assets.xcassets */,
+				D95633E71C702C7A00550C70 /* LaunchScreen.storyboard */,
+				D95633EA1C702C7A00550C70 /* Info.plist */,
+			);
+			path = NicoApp;
+			sourceTree = "<group>";
+		};
+		D95633F21C702C7A00550C70 /* NicoAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				D95633F31C702C7A00550C70 /* NicoAppTests.swift */,
+				D95633F51C702C7A00550C70 /* Info.plist */,
+			);
+			path = NicoAppTests;
+			sourceTree = "<group>";
+		};
+		D95633FD1C702C7A00550C70 /* NicoAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D95633FE1C702C7A00550C70 /* NicoAppUITests.swift */,
+				D95634001C702C7A00550C70 /* Info.plist */,
+			);
+			path = NicoAppUITests;
+			sourceTree = "<group>";
+		};
+		D95634121C702C9500550C70 /* NicoEntity */ = {
+			isa = PBXGroup;
+			children = (
+				D95634971C702D7A00550C70 /* Sources */,
+				D95634131C702C9500550C70 /* NicoEntity.h */,
+				D95634151C702C9500550C70 /* Info.plist */,
+			);
+			path = NicoEntity;
+			sourceTree = "<group>";
+		};
+		D95634201C702C9500550C70 /* NicoEntityTests */ = {
+			isa = PBXGroup;
+			children = (
+				D95634211C702C9500550C70 /* NicoEntityTests.swift */,
+				D95634231C702C9500550C70 /* Info.plist */,
+			);
+			path = NicoEntityTests;
+			sourceTree = "<group>";
+		};
+		D95634351C702C9F00550C70 /* NicoAPI */ = {
+			isa = PBXGroup;
+			children = (
+				D95635041C702EFF00550C70 /* Sources */,
+				D95634361C702C9F00550C70 /* NicoAPI.h */,
+				D95634381C702C9F00550C70 /* Info.plist */,
+			);
+			path = NicoAPI;
+			sourceTree = "<group>";
+		};
+		D95634431C702CA000550C70 /* NicoAPITests */ = {
+			isa = PBXGroup;
+			children = (
+				D95634441C702CA000550C70 /* NicoAPITests.swift */,
+				D95634461C702CA000550C70 /* Info.plist */,
+			);
+			path = NicoAPITests;
+			sourceTree = "<group>";
+		};
+		D95634571C702CB800550C70 /* NicoRepository */ = {
+			isa = PBXGroup;
+			children = (
+				D95635051C702F0D00550C70 /* Sources */,
+				D95634581C702CB800550C70 /* NicoRepository.h */,
+				D956345A1C702CB800550C70 /* Info.plist */,
+			);
+			path = NicoRepository;
+			sourceTree = "<group>";
+		};
+		D95634651C702CB800550C70 /* NicoRepositoryTests */ = {
+			isa = PBXGroup;
+			children = (
+				D95634661C702CB800550C70 /* NicoRepositoryTests.swift */,
+				D95634681C702CB800550C70 /* Info.plist */,
+			);
+			path = NicoRepositoryTests;
+			sourceTree = "<group>";
+		};
+		D95634791C702CC100550C70 /* NicoDomain */ = {
+			isa = PBXGroup;
+			children = (
+				D95635071C702F1900550C70 /* Sources */,
+				D956347A1C702CC100550C70 /* NicoDomain.h */,
+				D956347C1C702CC100550C70 /* Info.plist */,
+			);
+			path = NicoDomain;
+			sourceTree = "<group>";
+		};
+		D95634871C702CC100550C70 /* NicoDomainTests */ = {
+			isa = PBXGroup;
+			children = (
+				D95634881C702CC100550C70 /* NicoDomainTests.swift */,
+				D956348A1C702CC100550C70 /* Info.plist */,
+			);
+			path = NicoDomainTests;
+			sourceTree = "<group>";
+		};
+		D95634971C702D7A00550C70 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D9B1F51E1C73805F00F62FB5 /* NicoEntity.swift */,
+				D95634981C702D9B00550C70 /* Flv.swift */,
+				D95634991C702D9B00550C70 /* Video.swift */,
+				D9193B431C761AD100EAA0CB /* Session.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		D95634A21C702DFD00550C70 /* NicoDomainImpl */ = {
+			isa = PBXGroup;
+			children = (
+				D95635081C702F2000550C70 /* Sources */,
+				D95634A31C702DFD00550C70 /* NicoDomainImpl.h */,
+				D95634A51C702DFD00550C70 /* Info.plist */,
+			);
+			path = NicoDomainImpl;
+			sourceTree = "<group>";
+		};
+		D95634B01C702DFD00550C70 /* NicoDomainImplTests */ = {
+			isa = PBXGroup;
+			children = (
+				D95634B11C702DFD00550C70 /* NicoDomainImplTests.swift */,
+				D95634B31C702DFD00550C70 /* Info.plist */,
+			);
+			path = NicoDomainImplTests;
+			sourceTree = "<group>";
+		};
+		D95634C41C702E0600550C70 /* NicoRepositoryImpl */ = {
+			isa = PBXGroup;
+			children = (
+				D95635061C702F1300550C70 /* Sources */,
+				D95634C51C702E0600550C70 /* NicoRepositoryImpl.h */,
+				D95634C71C702E0700550C70 /* Info.plist */,
+			);
+			path = NicoRepositoryImpl;
+			sourceTree = "<group>";
+		};
+		D95634D21C702E0700550C70 /* NicoRepositoryImplTests */ = {
+			isa = PBXGroup;
+			children = (
+				D95634D31C702E0700550C70 /* NicoRepositoryImplTests.swift */,
+				D95634D51C702E0700550C70 /* Info.plist */,
+			);
+			path = NicoRepositoryImplTests;
+			sourceTree = "<group>";
+		};
+		D95634E61C702E1800550C70 /* NicoEnvironment */ = {
+			isa = PBXGroup;
+			children = (
+				D95635091C702F2600550C70 /* New Group */,
+				D95634E71C702E1800550C70 /* NicoEnvironment.h */,
+				D95634E91C702E1800550C70 /* Info.plist */,
+			);
+			path = NicoEnvironment;
+			sourceTree = "<group>";
+		};
+		D95634F41C702E1800550C70 /* NicoEnvironmentTests */ = {
+			isa = PBXGroup;
+			children = (
+				D95634F51C702E1800550C70 /* NicoEnvironmentTests.swift */,
+				D95634F71C702E1800550C70 /* Info.plist */,
+			);
+			path = NicoEnvironmentTests;
+			sourceTree = "<group>";
+		};
+		D95635041C702EFF00550C70 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D9193B411C761AA100EAA0CB /* GetSession.swift */,
+				D956350A1C70681200550C70 /* GetFlv.swift */,
+				D9C85C9F1C708E130087EF64 /* GetThumbInfo.swift */,
+				D9193B731C79410F00EAA0CB /* GetRanking.swift */,
+				D9193B3F1C76144500EAA0CB /* WatchVideo.swift */,
+				D956350C1C706AD000550C70 /* NicoAPIRequestToken.swift */,
+				D956350E1C706BB500550C70 /* NicoAPIError.swift */,
+				D94BA5151C70A032007A66E2 /* NicoAPI.swift */,
+				D974D1331C8AE89C0090ADBB /* PaginationResponse.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		D95635051C702F0D00550C70 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D9B1F51C1C7379AA00F62FB5 /* NicoRepository.swift */,
+				D9CF2FBF1CA189900079F83D /* RankingRepository.swift */,
+				D9E363E81CA41F9E00BB4719 /* SessionRepository.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		D95635061C702F1300550C70 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D9C02E221CA2EDC10023DE2D /* Util */,
+				D9C02E1F1CA2DB0D0023DE2D /* EntityRef */,
+				D9193B451C78B5A800EAA0CB /* Entity */,
+				D94BA5111C709A72007A66E2 /* VideoRepository.swift */,
+				D98F06721C8B44600037D7A9 /* RankingRepository.swift */,
+				D98F06741C8C41B90037D7A9 /* SessionRepository.swift */,
+				D9CF2FBD1CA188A60079F83D /* NicoRepositoryImpl.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		D95635071C702F1900550C70 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D9CF2FC31CA18F7C0079F83D /* NicoDomain.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		D95635081C702F2000550C70 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D9CF2FC11CA18C740079F83D /* Repository.swift */,
+				D9CF2FC51CA190E10079F83D /* Domain.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		D95635091C702F2600550C70 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		D9C02E1F1CA2DB0D0023DE2D /* EntityRef */ = {
+			isa = PBXGroup;
+			children = (
+				D9C02E201CA2DBF90023DE2D /* RefRanking.swift */,
+			);
+			path = EntityRef;
+			sourceTree = "<group>";
+		};
+		D9C02E221CA2EDC10023DE2D /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				D9C02E231CA2EDD60023DE2D /* RxSwift.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		D9E363EA1CA42C6400BB4719 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D9418E931CA42FCC00B5379D /* Controller */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D956340E1C702C9500550C70 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D95634371C702C9F00550C70 /* NicoAPI.h in Headers */,
+				D95634A41C702DFD00550C70 /* NicoDomainImpl.h in Headers */,
+				D95634591C702CB800550C70 /* NicoRepository.h in Headers */,
+				D95634141C702C9500550C70 /* NicoEntity.h in Headers */,
+				D956347B1C702CC100550C70 /* NicoDomain.h in Headers */,
+				D95634E81C702E1800550C70 /* NicoEnvironment.h in Headers */,
+				D95634C61C702E0600550C70 /* NicoRepositoryImpl.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95634311C702C9F00550C70 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95634531C702CB800550C70 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95634751C702CC100550C70 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D956349E1C702DFD00550C70 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95634C01C702E0600550C70 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95634E21C702E1800550C70 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D95633DA1C702C7A00550C70 /* NicoApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D95634031C702C7A00550C70 /* Build configuration list for PBXNativeTarget "NicoApp" */;
+			buildPhases = (
+				97BC0B85F9BD664B75513CFF /* Check Pods Manifest.lock */,
+				D95633D71C702C7A00550C70 /* Sources */,
+				D95633D81C702C7A00550C70 /* Frameworks */,
+				D95633D91C702C7A00550C70 /* Resources */,
+				D956342B1C702C9500550C70 /* Embed Frameworks */,
+				BA7C8C04167369298A49DAD4 /* Embed Pods Frameworks */,
+				6E6AC629E26C7D13F20B87B2 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D95634251C702C9500550C70 /* PBXTargetDependency */,
+				D95634481C702CA000550C70 /* PBXTargetDependency */,
+				D956346A1C702CB800550C70 /* PBXTargetDependency */,
+				D956348C1C702CC100550C70 /* PBXTargetDependency */,
+				D95634B51C702DFD00550C70 /* PBXTargetDependency */,
+				D95634D71C702E0700550C70 /* PBXTargetDependency */,
+				D95634F91C702E1800550C70 /* PBXTargetDependency */,
+			);
+			name = NicoApp;
+			productName = NicoApp;
+			productReference = D95633DB1C702C7A00550C70 /* NicoApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D95633EE1C702C7A00550C70 /* NicoAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D95634061C702C7A00550C70 /* Build configuration list for PBXNativeTarget "NicoAppTests" */;
+			buildPhases = (
+				D95633EB1C702C7A00550C70 /* Sources */,
+				D95633EC1C702C7A00550C70 /* Frameworks */,
+				D95633ED1C702C7A00550C70 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D95633F11C702C7A00550C70 /* PBXTargetDependency */,
+			);
+			name = NicoAppTests;
+			productName = NicoAppTests;
+			productReference = D95633EF1C702C7A00550C70 /* NicoAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D95633F91C702C7A00550C70 /* NicoAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D95634091C702C7A00550C70 /* Build configuration list for PBXNativeTarget "NicoAppUITests" */;
+			buildPhases = (
+				D95633F61C702C7A00550C70 /* Sources */,
+				D95633F71C702C7A00550C70 /* Frameworks */,
+				D95633F81C702C7A00550C70 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D95633FC1C702C7A00550C70 /* PBXTargetDependency */,
+			);
+			name = NicoAppUITests;
+			productName = NicoAppUITests;
+			productReference = D95633FA1C702C7A00550C70 /* NicoAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		D95634101C702C9500550C70 /* NicoEntity */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D95634281C702C9500550C70 /* Build configuration list for PBXNativeTarget "NicoEntity" */;
+			buildPhases = (
+				8F6183F2C8AC65EEBC2D20D6 /* Check Pods Manifest.lock */,
+				D956340C1C702C9500550C70 /* Sources */,
+				D956340D1C702C9500550C70 /* Frameworks */,
+				D956340E1C702C9500550C70 /* Headers */,
+				D956340F1C702C9500550C70 /* Resources */,
+				CF3C6418C283F3370A12332D /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NicoEntity;
+			productName = NicoEntity;
+			productReference = D95634111C702C9500550C70 /* NicoEntity.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D95634191C702C9500550C70 /* NicoEntityTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D956342C1C702C9500550C70 /* Build configuration list for PBXNativeTarget "NicoEntityTests" */;
+			buildPhases = (
+				D95634161C702C9500550C70 /* Sources */,
+				D95634171C702C9500550C70 /* Frameworks */,
+				D95634181C702C9500550C70 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D956341D1C702C9500550C70 /* PBXTargetDependency */,
+				D956341F1C702C9500550C70 /* PBXTargetDependency */,
+			);
+			name = NicoEntityTests;
+			productName = NicoEntityTests;
+			productReference = D956341A1C702C9500550C70 /* NicoEntityTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D95634331C702C9F00550C70 /* NicoAPI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D956344B1C702CA000550C70 /* Build configuration list for PBXNativeTarget "NicoAPI" */;
+			buildPhases = (
+				E343566FE63067889A476F7F /* Check Pods Manifest.lock */,
+				D956342F1C702C9F00550C70 /* Sources */,
+				D95634301C702C9F00550C70 /* Frameworks */,
+				D95634311C702C9F00550C70 /* Headers */,
+				D95634321C702C9F00550C70 /* Resources */,
+				CF3BE923D0D6D1D23FB7F817 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NicoAPI;
+			productName = NicoAPI;
+			productReference = D95634341C702C9F00550C70 /* NicoAPI.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D956343C1C702CA000550C70 /* NicoAPITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D956344E1C702CA000550C70 /* Build configuration list for PBXNativeTarget "NicoAPITests" */;
+			buildPhases = (
+				D95634391C702CA000550C70 /* Sources */,
+				D956343A1C702CA000550C70 /* Frameworks */,
+				D956343B1C702CA000550C70 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D95634401C702CA000550C70 /* PBXTargetDependency */,
+				D95634421C702CA000550C70 /* PBXTargetDependency */,
+			);
+			name = NicoAPITests;
+			productName = NicoAPITests;
+			productReference = D956343D1C702CA000550C70 /* NicoAPITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D95634551C702CB800550C70 /* NicoRepository */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D956346D1C702CB800550C70 /* Build configuration list for PBXNativeTarget "NicoRepository" */;
+			buildPhases = (
+				8F36FADA5E4934B36000E6F2 /* Check Pods Manifest.lock */,
+				D95634511C702CB800550C70 /* Sources */,
+				D95634521C702CB800550C70 /* Frameworks */,
+				D95634531C702CB800550C70 /* Headers */,
+				D95634541C702CB800550C70 /* Resources */,
+				1081F78244EE6DE64C1B374A /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NicoRepository;
+			productName = NicoRepository;
+			productReference = D95634561C702CB800550C70 /* NicoRepository.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D956345E1C702CB800550C70 /* NicoRepositoryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D95634701C702CB800550C70 /* Build configuration list for PBXNativeTarget "NicoRepositoryTests" */;
+			buildPhases = (
+				D956345B1C702CB800550C70 /* Sources */,
+				D956345C1C702CB800550C70 /* Frameworks */,
+				D956345D1C702CB800550C70 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D95634621C702CB800550C70 /* PBXTargetDependency */,
+				D95634641C702CB800550C70 /* PBXTargetDependency */,
+			);
+			name = NicoRepositoryTests;
+			productName = NicoRepositoryTests;
+			productReference = D956345F1C702CB800550C70 /* NicoRepositoryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D95634771C702CC100550C70 /* NicoDomain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D956348F1C702CC200550C70 /* Build configuration list for PBXNativeTarget "NicoDomain" */;
+			buildPhases = (
+				D9729537146A05989325A40D /* Check Pods Manifest.lock */,
+				D95634731C702CC100550C70 /* Sources */,
+				D95634741C702CC100550C70 /* Frameworks */,
+				D95634751C702CC100550C70 /* Headers */,
+				D95634761C702CC100550C70 /* Resources */,
+				C1A236E8C34F9817562A75BE /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NicoDomain;
+			productName = NicoDomain;
+			productReference = D95634781C702CC100550C70 /* NicoDomain.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D95634801C702CC100550C70 /* NicoDomainTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D95634921C702CC200550C70 /* Build configuration list for PBXNativeTarget "NicoDomainTests" */;
+			buildPhases = (
+				D956347D1C702CC100550C70 /* Sources */,
+				D956347E1C702CC100550C70 /* Frameworks */,
+				D956347F1C702CC100550C70 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D95634841C702CC100550C70 /* PBXTargetDependency */,
+				D95634861C702CC100550C70 /* PBXTargetDependency */,
+			);
+			name = NicoDomainTests;
+			productName = NicoDomainTests;
+			productReference = D95634811C702CC100550C70 /* NicoDomainTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D95634A01C702DFD00550C70 /* NicoDomainImpl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D95634B81C702DFD00550C70 /* Build configuration list for PBXNativeTarget "NicoDomainImpl" */;
+			buildPhases = (
+				E20DCB7D52FF61BCC0EF64CE /* Check Pods Manifest.lock */,
+				D956349C1C702DFD00550C70 /* Sources */,
+				D956349D1C702DFD00550C70 /* Frameworks */,
+				D956349E1C702DFD00550C70 /* Headers */,
+				D956349F1C702DFD00550C70 /* Resources */,
+				9C1C8C0A4BF6086D4E21F443 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NicoDomainImpl;
+			productName = NicoDomainImpl;
+			productReference = D95634A11C702DFD00550C70 /* NicoDomainImpl.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D95634A91C702DFD00550C70 /* NicoDomainImplTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D95634BB1C702DFD00550C70 /* Build configuration list for PBXNativeTarget "NicoDomainImplTests" */;
+			buildPhases = (
+				D95634A61C702DFD00550C70 /* Sources */,
+				D95634A71C702DFD00550C70 /* Frameworks */,
+				D95634A81C702DFD00550C70 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D95634AD1C702DFD00550C70 /* PBXTargetDependency */,
+				D95634AF1C702DFD00550C70 /* PBXTargetDependency */,
+			);
+			name = NicoDomainImplTests;
+			productName = NicoDomainImplTests;
+			productReference = D95634AA1C702DFD00550C70 /* NicoDomainImplTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D95634C21C702E0600550C70 /* NicoRepositoryImpl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D95634DA1C702E0700550C70 /* Build configuration list for PBXNativeTarget "NicoRepositoryImpl" */;
+			buildPhases = (
+				78F5C6A3795A0B4750596F01 /* Check Pods Manifest.lock */,
+				D95634BE1C702E0600550C70 /* Sources */,
+				D95634BF1C702E0600550C70 /* Frameworks */,
+				D95634C01C702E0600550C70 /* Headers */,
+				D95634C11C702E0600550C70 /* Resources */,
+				08EEF4288C994DEC8D75AB4B /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NicoRepositoryImpl;
+			productName = NicoRepositoryImpl;
+			productReference = D95634C31C702E0600550C70 /* NicoRepositoryImpl.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D95634CB1C702E0700550C70 /* NicoRepositoryImplTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D95634DD1C702E0700550C70 /* Build configuration list for PBXNativeTarget "NicoRepositoryImplTests" */;
+			buildPhases = (
+				D95634C81C702E0700550C70 /* Sources */,
+				D95634C91C702E0700550C70 /* Frameworks */,
+				D95634CA1C702E0700550C70 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D95634CF1C702E0700550C70 /* PBXTargetDependency */,
+				D95634D11C702E0700550C70 /* PBXTargetDependency */,
+			);
+			name = NicoRepositoryImplTests;
+			productName = NicoRepositoryImplTests;
+			productReference = D95634CC1C702E0700550C70 /* NicoRepositoryImplTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D95634E41C702E1800550C70 /* NicoEnvironment */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D95634FC1C702E1800550C70 /* Build configuration list for PBXNativeTarget "NicoEnvironment" */;
+			buildPhases = (
+				D95634E01C702E1800550C70 /* Sources */,
+				D95634E11C702E1800550C70 /* Frameworks */,
+				D95634E21C702E1800550C70 /* Headers */,
+				D95634E31C702E1800550C70 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NicoEnvironment;
+			productName = NicoEnvironment;
+			productReference = D95634E51C702E1800550C70 /* NicoEnvironment.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D95634ED1C702E1800550C70 /* NicoEnvironmentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D95634FF1C702E1800550C70 /* Build configuration list for PBXNativeTarget "NicoEnvironmentTests" */;
+			buildPhases = (
+				D95634EA1C702E1800550C70 /* Sources */,
+				D95634EB1C702E1800550C70 /* Frameworks */,
+				D95634EC1C702E1800550C70 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D95634F11C702E1800550C70 /* PBXTargetDependency */,
+				D95634F31C702E1800550C70 /* PBXTargetDependency */,
+			);
+			name = NicoEnvironmentTests;
+			productName = NicoEnvironmentTests;
+			productReference = D95634EE1C702E1800550C70 /* NicoEnvironmentTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D95633D31C702C7A00550C70 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = jp.sora0077;
+				TargetAttributes = {
+					D95633DA1C702C7A00550C70 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = B2TD54U4MA;
+					};
+					D95633EE1C702C7A00550C70 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = D95633DA1C702C7A00550C70;
+					};
+					D95633F91C702C7A00550C70 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = D95633DA1C702C7A00550C70;
+					};
+					D95634101C702C9500550C70 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					D95634191C702C9500550C70 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = D95633DA1C702C7A00550C70;
+					};
+					D95634331C702C9F00550C70 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					D956343C1C702CA000550C70 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = D95633DA1C702C7A00550C70;
+					};
+					D95634551C702CB800550C70 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					D956345E1C702CB800550C70 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = D95633DA1C702C7A00550C70;
+					};
+					D95634771C702CC100550C70 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					D95634801C702CC100550C70 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = D95633DA1C702C7A00550C70;
+					};
+					D95634A01C702DFD00550C70 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					D95634A91C702DFD00550C70 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = D95633DA1C702C7A00550C70;
+					};
+					D95634C21C702E0600550C70 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					D95634CB1C702E0700550C70 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = D95633DA1C702C7A00550C70;
+					};
+					D95634E41C702E1800550C70 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					D95634ED1C702E1800550C70 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = D95633DA1C702C7A00550C70;
+					};
+				};
+			};
+			buildConfigurationList = D95633D61C702C7A00550C70 /* Build configuration list for PBXProject "NicoApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D95633D21C702C7A00550C70;
+			productRefGroup = D95633DC1C702C7A00550C70 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D95633DA1C702C7A00550C70 /* NicoApp */,
+				D95633EE1C702C7A00550C70 /* NicoAppTests */,
+				D95633F91C702C7A00550C70 /* NicoAppUITests */,
+				D95634101C702C9500550C70 /* NicoEntity */,
+				D95634191C702C9500550C70 /* NicoEntityTests */,
+				D95634331C702C9F00550C70 /* NicoAPI */,
+				D956343C1C702CA000550C70 /* NicoAPITests */,
+				D95634551C702CB800550C70 /* NicoRepository */,
+				D956345E1C702CB800550C70 /* NicoRepositoryTests */,
+				D95634C21C702E0600550C70 /* NicoRepositoryImpl */,
+				D95634CB1C702E0700550C70 /* NicoRepositoryImplTests */,
+				D95634771C702CC100550C70 /* NicoDomain */,
+				D95634801C702CC100550C70 /* NicoDomainTests */,
+				D95634A01C702DFD00550C70 /* NicoDomainImpl */,
+				D95634A91C702DFD00550C70 /* NicoDomainImplTests */,
+				D95634E41C702E1800550C70 /* NicoEnvironment */,
+				D95634ED1C702E1800550C70 /* NicoEnvironmentTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D95633D91C702C7A00550C70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D95633E91C702C7A00550C70 /* LaunchScreen.storyboard in Resources */,
+				D95633E61C702C7A00550C70 /* Assets.xcassets in Resources */,
+				D95633E41C702C7A00550C70 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95633ED1C702C7A00550C70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95633F81C702C7A00550C70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D956340F1C702C9500550C70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95634181C702C9500550C70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95634321C702C9F00550C70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D956343B1C702CA000550C70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95634541C702CB800550C70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D956345D1C702CB800550C70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95634761C702CC100550C70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D956347F1C702CC100550C70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D956349F1C702DFD00550C70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95634A81C702DFD00550C70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95634C11C702E0600550C70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95634CA1C702E0700550C70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95634E31C702E1800550C70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95634EC1C702E1800550C70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		08EEF4288C994DEC8D75AB4B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NicoRepositoryImpl/Pods-NicoRepositoryImpl-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1081F78244EE6DE64C1B374A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NicoRepository/Pods-NicoRepository-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E6AC629E26C7D13F20B87B2 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NicoApp/Pods-NicoApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78F5C6A3795A0B4750596F01 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8F36FADA5E4934B36000E6F2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8F6183F2C8AC65EEBC2D20D6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		97BC0B85F9BD664B75513CFF /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9C1C8C0A4BF6086D4E21F443 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NicoDomainImpl/Pods-NicoDomainImpl-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA7C8C04167369298A49DAD4 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NicoApp/Pods-NicoApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1A236E8C34F9817562A75BE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NicoDomain/Pods-NicoDomain-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF3BE923D0D6D1D23FB7F817 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NicoAPI/Pods-NicoAPI-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF3C6418C283F3370A12332D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NicoEntity/Pods-NicoEntity-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9729537146A05989325A40D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E20DCB7D52FF61BCC0EF64CE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E343566FE63067889A476F7F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D95633D71C702C7A00550C70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D95633E11C702C7A00550C70 /* ViewController.swift in Sources */,
+				D95633DF1C702C7A00550C70 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95633EB1C702C7A00550C70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D95633F41C702C7A00550C70 /* NicoAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95633F61C702C7A00550C70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D95633FF1C702C7A00550C70 /* NicoAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D956340C1C702C9500550C70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9193B441C761AD100EAA0CB /* Session.swift in Sources */,
+				D9B1F51F1C73805F00F62FB5 /* NicoEntity.swift in Sources */,
+				D956349A1C702D9B00550C70 /* Flv.swift in Sources */,
+				D956349B1C702D9B00550C70 /* Video.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95634161C702C9500550C70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D95634221C702C9500550C70 /* NicoEntityTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D956342F1C702C9F00550C70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9193B421C761AA100EAA0CB /* GetSession.swift in Sources */,
+				D956350F1C706BB500550C70 /* NicoAPIError.swift in Sources */,
+				D974D1341C8AE89C0090ADBB /* PaginationResponse.swift in Sources */,
+				D9C85CA01C708E130087EF64 /* GetThumbInfo.swift in Sources */,
+				D94BA5161C70A032007A66E2 /* NicoAPI.swift in Sources */,
+				D956350B1C70681200550C70 /* GetFlv.swift in Sources */,
+				D9193B741C79410F00EAA0CB /* GetRanking.swift in Sources */,
+				D956350D1C706AD000550C70 /* NicoAPIRequestToken.swift in Sources */,
+				D9193B401C76144500EAA0CB /* WatchVideo.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95634391C702CA000550C70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D95634451C702CA000550C70 /* NicoAPITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95634511C702CB800550C70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9CF2FC01CA189900079F83D /* RankingRepository.swift in Sources */,
+				D9E363E91CA41F9E00BB4719 /* SessionRepository.swift in Sources */,
+				D9B1F51D1C7379AA00F62FB5 /* NicoRepository.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D956345B1C702CB800550C70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D95634671C702CB800550C70 /* NicoRepositoryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95634731C702CC100550C70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9CF2FC41CA18F7C0079F83D /* NicoDomain.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D956347D1C702CC100550C70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D95634891C702CC100550C70 /* NicoDomainTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D956349C1C702DFD00550C70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9CF2FC21CA18C740079F83D /* Repository.swift in Sources */,
+				D9CF2FC61CA190E10079F83D /* Domain.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95634A61C702DFD00550C70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D95634B21C702DFD00550C70 /* NicoDomainImplTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95634BE1C702E0600550C70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9193B4B1C78B68500EAA0CB /* Session.swift in Sources */,
+				D9193B471C78B5B900EAA0CB /* Flv.swift in Sources */,
+				D9C02E211CA2DBF90023DE2D /* RefRanking.swift in Sources */,
+				D9193B491C78B65C00EAA0CB /* Video.swift in Sources */,
+				D98F06731C8B44600037D7A9 /* RankingRepository.swift in Sources */,
+				D9CF2FBE1CA188A60079F83D /* NicoRepositoryImpl.swift in Sources */,
+				D9C02E241CA2EDD60023DE2D /* RxSwift.swift in Sources */,
+				D98F06751C8C41B90037D7A9 /* SessionRepository.swift in Sources */,
+				D94BA5121C709A72007A66E2 /* VideoRepository.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95634C81C702E0700550C70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D95634D41C702E0700550C70 /* NicoRepositoryImplTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95634E01C702E1800550C70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D95634EA1C702E1800550C70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D95634F61C702E1800550C70 /* NicoEnvironmentTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D95633F11C702C7A00550C70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D95633DA1C702C7A00550C70 /* NicoApp */;
+			targetProxy = D95633F01C702C7A00550C70 /* PBXContainerItemProxy */;
+		};
+		D95633FC1C702C7A00550C70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D95633DA1C702C7A00550C70 /* NicoApp */;
+			targetProxy = D95633FB1C702C7A00550C70 /* PBXContainerItemProxy */;
+		};
+		D956341D1C702C9500550C70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D95634101C702C9500550C70 /* NicoEntity */;
+			targetProxy = D956341C1C702C9500550C70 /* PBXContainerItemProxy */;
+		};
+		D956341F1C702C9500550C70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D95633DA1C702C7A00550C70 /* NicoApp */;
+			targetProxy = D956341E1C702C9500550C70 /* PBXContainerItemProxy */;
+		};
+		D95634251C702C9500550C70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D95634101C702C9500550C70 /* NicoEntity */;
+			targetProxy = D95634241C702C9500550C70 /* PBXContainerItemProxy */;
+		};
+		D95634401C702CA000550C70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D95634331C702C9F00550C70 /* NicoAPI */;
+			targetProxy = D956343F1C702CA000550C70 /* PBXContainerItemProxy */;
+		};
+		D95634421C702CA000550C70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D95633DA1C702C7A00550C70 /* NicoApp */;
+			targetProxy = D95634411C702CA000550C70 /* PBXContainerItemProxy */;
+		};
+		D95634481C702CA000550C70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D95634331C702C9F00550C70 /* NicoAPI */;
+			targetProxy = D95634471C702CA000550C70 /* PBXContainerItemProxy */;
+		};
+		D95634621C702CB800550C70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D95634551C702CB800550C70 /* NicoRepository */;
+			targetProxy = D95634611C702CB800550C70 /* PBXContainerItemProxy */;
+		};
+		D95634641C702CB800550C70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D95633DA1C702C7A00550C70 /* NicoApp */;
+			targetProxy = D95634631C702CB800550C70 /* PBXContainerItemProxy */;
+		};
+		D956346A1C702CB800550C70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D95634551C702CB800550C70 /* NicoRepository */;
+			targetProxy = D95634691C702CB800550C70 /* PBXContainerItemProxy */;
+		};
+		D95634841C702CC100550C70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D95634771C702CC100550C70 /* NicoDomain */;
+			targetProxy = D95634831C702CC100550C70 /* PBXContainerItemProxy */;
+		};
+		D95634861C702CC100550C70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D95633DA1C702C7A00550C70 /* NicoApp */;
+			targetProxy = D95634851C702CC100550C70 /* PBXContainerItemProxy */;
+		};
+		D956348C1C702CC100550C70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D95634771C702CC100550C70 /* NicoDomain */;
+			targetProxy = D956348B1C702CC100550C70 /* PBXContainerItemProxy */;
+		};
+		D95634AD1C702DFD00550C70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D95634A01C702DFD00550C70 /* NicoDomainImpl */;
+			targetProxy = D95634AC1C702DFD00550C70 /* PBXContainerItemProxy */;
+		};
+		D95634AF1C702DFD00550C70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D95633DA1C702C7A00550C70 /* NicoApp */;
+			targetProxy = D95634AE1C702DFD00550C70 /* PBXContainerItemProxy */;
+		};
+		D95634B51C702DFD00550C70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D95634A01C702DFD00550C70 /* NicoDomainImpl */;
+			targetProxy = D95634B41C702DFD00550C70 /* PBXContainerItemProxy */;
+		};
+		D95634CF1C702E0700550C70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D95634C21C702E0600550C70 /* NicoRepositoryImpl */;
+			targetProxy = D95634CE1C702E0700550C70 /* PBXContainerItemProxy */;
+		};
+		D95634D11C702E0700550C70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D95633DA1C702C7A00550C70 /* NicoApp */;
+			targetProxy = D95634D01C702E0700550C70 /* PBXContainerItemProxy */;
+		};
+		D95634D71C702E0700550C70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D95634C21C702E0600550C70 /* NicoRepositoryImpl */;
+			targetProxy = D95634D61C702E0700550C70 /* PBXContainerItemProxy */;
+		};
+		D95634F11C702E1800550C70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D95634E41C702E1800550C70 /* NicoEnvironment */;
+			targetProxy = D95634F01C702E1800550C70 /* PBXContainerItemProxy */;
+		};
+		D95634F31C702E1800550C70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D95633DA1C702C7A00550C70 /* NicoApp */;
+			targetProxy = D95634F21C702E1800550C70 /* PBXContainerItemProxy */;
+		};
+		D95634F91C702E1800550C70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D95634E41C702E1800550C70 /* NicoEnvironment */;
+			targetProxy = D95634F81C702E1800550C70 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D95633E21C702C7A00550C70 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D95633E31C702C7A00550C70 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D95633E71C702C7A00550C70 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D95633E81C702C7A00550C70 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D95634011C702C7A00550C70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D95634021C702C7A00550C70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D95634041C702C7A00550C70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FDC036C83A8B98C405B588E /* Pods-NicoApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = NicoApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.NicoApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D95634051C702C7A00550C70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B41FB23099CACC31A509CF6 /* Pods-NicoApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = NicoApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.NicoApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D95634071C702C7A00550C70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = NicoAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.NicoAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NicoApp.app/NicoApp";
+			};
+			name = Debug;
+		};
+		D95634081C702C7A00550C70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = NicoAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.NicoAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NicoApp.app/NicoApp";
+			};
+			name = Release;
+		};
+		D956340A1C702C7A00550C70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = NicoAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.NicoAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = NicoApp;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		D956340B1C702C7A00550C70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = NicoAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.NicoAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = NicoApp;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+		D95634291C702C9500550C70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2E9F4710176B54607F14ED5 /* Pods-NicoEntity.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NicoEntity/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.NicoEntity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D956342A1C702C9500550C70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 528730C1E6C4D509F6E9CAAE /* Pods-NicoEntity.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NicoEntity/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.NicoEntity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D956342D1C702C9500550C70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = NicoEntityTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.NicoEntityTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NicoApp.app/NicoApp";
+			};
+			name = Debug;
+		};
+		D956342E1C702C9500550C70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = NicoEntityTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.NicoEntityTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NicoApp.app/NicoApp";
+			};
+			name = Release;
+		};
+		D956344C1C702CA000550C70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08AE78E56A8A01FD90ACEB31 /* Pods-NicoAPI.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NicoAPI/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.NicoAPI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D956344D1C702CA000550C70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04B3A6782CB9AA21D14E2B92 /* Pods-NicoAPI.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NicoAPI/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.NicoAPI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D956344F1C702CA000550C70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = NicoAPITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.NicoAPITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NicoApp.app/NicoApp";
+			};
+			name = Debug;
+		};
+		D95634501C702CA000550C70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = NicoAPITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.NicoAPITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NicoApp.app/NicoApp";
+			};
+			name = Release;
+		};
+		D956346E1C702CB800550C70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1E6E4FAACC68E16E3D07F15 /* Pods-NicoRepository.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NicoRepository/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.NicoRepository;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D956346F1C702CB800550C70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8340B5CADE3CCFA79020FBB4 /* Pods-NicoRepository.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NicoRepository/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.NicoRepository;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D95634711C702CB800550C70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = NicoRepositoryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.NicoRepositoryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NicoApp.app/NicoApp";
+			};
+			name = Debug;
+		};
+		D95634721C702CB800550C70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = NicoRepositoryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.NicoRepositoryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NicoApp.app/NicoApp";
+			};
+			name = Release;
+		};
+		D95634901C702CC200550C70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23DBB58EA8C0F3DE5F70FEA4 /* Pods-NicoDomain.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NicoDomain/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.NicoDomain;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D95634911C702CC200550C70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26FE31B661829303DE1B7714 /* Pods-NicoDomain.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NicoDomain/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.NicoDomain;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D95634931C702CC200550C70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = NicoDomainTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.NicoDomainTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NicoApp.app/NicoApp";
+			};
+			name = Debug;
+		};
+		D95634941C702CC200550C70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = NicoDomainTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.NicoDomainTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NicoApp.app/NicoApp";
+			};
+			name = Release;
+		};
+		D95634B91C702DFD00550C70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DAA736AF15D063D122D847A /* Pods-NicoDomainImpl.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NicoDomainImpl/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.NicoDomainImpl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D95634BA1C702DFD00550C70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAC9877E6761A1550D97E29F /* Pods-NicoDomainImpl.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NicoDomainImpl/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.NicoDomainImpl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D95634BC1C702DFD00550C70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = NicoDomainImplTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.NicoDomainImplTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NicoApp.app/NicoApp";
+			};
+			name = Debug;
+		};
+		D95634BD1C702DFD00550C70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = NicoDomainImplTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.NicoDomainImplTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NicoApp.app/NicoApp";
+			};
+			name = Release;
+		};
+		D95634DB1C702E0700550C70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5238E188FFC6A12670EDBAC2 /* Pods-NicoRepositoryImpl.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NicoRepositoryImpl/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.NicoRepositoryImpl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D95634DC1C702E0700550C70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06D78134DDBFBF2D56ECC946 /* Pods-NicoRepositoryImpl.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NicoRepositoryImpl/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.NicoRepositoryImpl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D95634DE1C702E0700550C70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = NicoRepositoryImplTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.NicoRepositoryImplTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NicoApp.app/NicoApp";
+			};
+			name = Debug;
+		};
+		D95634DF1C702E0700550C70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = NicoRepositoryImplTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.NicoRepositoryImplTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NicoApp.app/NicoApp";
+			};
+			name = Release;
+		};
+		D95634FD1C702E1800550C70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NicoEnvironment/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.NicoEnvironment;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D95634FE1C702E1800550C70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NicoEnvironment/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.NicoEnvironment;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D95635001C702E1800550C70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = NicoEnvironmentTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.NicoEnvironmentTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NicoApp.app/NicoApp";
+			};
+			name = Debug;
+		};
+		D95635011C702E1800550C70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = NicoEnvironmentTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sora0077.NicoEnvironmentTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NicoApp.app/NicoApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D95633D61C702C7A00550C70 /* Build configuration list for PBXProject "NicoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D95634011C702C7A00550C70 /* Debug */,
+				D95634021C702C7A00550C70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D95634031C702C7A00550C70 /* Build configuration list for PBXNativeTarget "NicoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D95634041C702C7A00550C70 /* Debug */,
+				D95634051C702C7A00550C70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D95634061C702C7A00550C70 /* Build configuration list for PBXNativeTarget "NicoAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D95634071C702C7A00550C70 /* Debug */,
+				D95634081C702C7A00550C70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D95634091C702C7A00550C70 /* Build configuration list for PBXNativeTarget "NicoAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D956340A1C702C7A00550C70 /* Debug */,
+				D956340B1C702C7A00550C70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D95634281C702C9500550C70 /* Build configuration list for PBXNativeTarget "NicoEntity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D95634291C702C9500550C70 /* Debug */,
+				D956342A1C702C9500550C70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D956342C1C702C9500550C70 /* Build configuration list for PBXNativeTarget "NicoEntityTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D956342D1C702C9500550C70 /* Debug */,
+				D956342E1C702C9500550C70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D956344B1C702CA000550C70 /* Build configuration list for PBXNativeTarget "NicoAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D956344C1C702CA000550C70 /* Debug */,
+				D956344D1C702CA000550C70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D956344E1C702CA000550C70 /* Build configuration list for PBXNativeTarget "NicoAPITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D956344F1C702CA000550C70 /* Debug */,
+				D95634501C702CA000550C70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D956346D1C702CB800550C70 /* Build configuration list for PBXNativeTarget "NicoRepository" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D956346E1C702CB800550C70 /* Debug */,
+				D956346F1C702CB800550C70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D95634701C702CB800550C70 /* Build configuration list for PBXNativeTarget "NicoRepositoryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D95634711C702CB800550C70 /* Debug */,
+				D95634721C702CB800550C70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D956348F1C702CC200550C70 /* Build configuration list for PBXNativeTarget "NicoDomain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D95634901C702CC200550C70 /* Debug */,
+				D95634911C702CC200550C70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D95634921C702CC200550C70 /* Build configuration list for PBXNativeTarget "NicoDomainTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D95634931C702CC200550C70 /* Debug */,
+				D95634941C702CC200550C70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D95634B81C702DFD00550C70 /* Build configuration list for PBXNativeTarget "NicoDomainImpl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D95634B91C702DFD00550C70 /* Debug */,
+				D95634BA1C702DFD00550C70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D95634BB1C702DFD00550C70 /* Build configuration list for PBXNativeTarget "NicoDomainImplTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D95634BC1C702DFD00550C70 /* Debug */,
+				D95634BD1C702DFD00550C70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D95634DA1C702E0700550C70 /* Build configuration list for PBXNativeTarget "NicoRepositoryImpl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D95634DB1C702E0700550C70 /* Debug */,
+				D95634DC1C702E0700550C70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D95634DD1C702E0700550C70 /* Build configuration list for PBXNativeTarget "NicoRepositoryImplTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D95634DE1C702E0700550C70 /* Debug */,
+				D95634DF1C702E0700550C70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D95634FC1C702E1800550C70 /* Build configuration list for PBXNativeTarget "NicoEnvironment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D95634FD1C702E1800550C70 /* Debug */,
+				D95634FE1C702E1800550C70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D95634FF1C702E1800550C70 /* Build configuration list for PBXNativeTarget "NicoEnvironmentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D95635001C702E1800550C70 /* Debug */,
+				D95635011C702E1800550C70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D95633D31C702C7A00550C70 /* Project object */;
+}

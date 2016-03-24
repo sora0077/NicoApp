@@ -1,0 +1,52 @@
+PODS:
+  - Alamofire (3.3.0)
+  - Fuzi (0.3.0)
+  - Himotoki (1.7.0)
+  - QueryKit (0.12.1)
+  - Realm (0.98.5):
+    - Realm/Headers (= 0.98.5)
+  - Realm/Headers (0.98.5)
+  - RealmSwift (0.98.5):
+    - Realm (= 0.98.5)
+  - RxAPISchema (0.0.1):
+    - Alamofire
+    - RxSwift
+  - RxSwift (2.3.1)
+  - Timepiece (0.4.2)
+  - WindowKit (0.0.1)
+  - XLPagerTabStrip (5.0.0)
+
+DEPENDENCIES:
+  - Fuzi
+  - Himotoki
+  - QueryKit
+  - RealmSwift
+  - RxAPISchema
+  - RxSwift
+  - Timepiece
+  - WindowKit (from `https://github.com/sora0077/WindowKit.git`)
+  - XLPagerTabStrip
+
+EXTERNAL SOURCES:
+  WindowKit:
+    :git: https://github.com/sora0077/WindowKit.git
+
+CHECKOUT OPTIONS:
+  WindowKit:
+    :commit: 1f513d9c36470110b8f8f1ca6d1b679d5d4d1a80
+    :git: https://github.com/sora0077/WindowKit.git
+
+SPEC CHECKSUMS:
+  Alamofire: 9054db4a1b1ca9e363223183e01cea380159a27c
+  Fuzi: 4725b8743f0a92100108e013347bf32ca80d93a1
+  Himotoki: a97b4a5861d6d25fc0746f0e19164eef03c19347
+  QueryKit: 6a8dbe9f33ffac00c424143695681a949b58518d
+  Realm: db08379969e45cea2edd1c3c0a090fe9e22d2d2f
+  RealmSwift: cb11ad1c35e15dc982f2dbf5afe2a3124193a358
+  RxAPISchema: a8a109fcaec0c81718fd8429076a8af2248c6d10
+  RxSwift: 829b2843e9eddc77a02cb3f5117f0d55f8f646f1
+  Timepiece: cf53bb908bf542acc0e3d5f69cabfed869df4ebd
+  WindowKit: 860fb9c6cabcb0402fca02ad271d413ade7ae4e9
+  XLPagerTabStrip: 87b8b705f9a7178e76a063ffaa2d70045944a965
+
+COCOAPODS: 0.39.0
