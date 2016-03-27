@@ -7,20 +7,19 @@
 //
 
 import UIKit
+import SnapKit
 import XLPagerTabStrip
-
 
 class NicoAppTabController: ButtonBarPagerTabStripViewController {
     
-    let graySpotifyColor = UIColor(red: 21/255.0, green: 21/255.0, blue: 24/255.0, alpha: 1.0)
+    let graySpotifyColor = UIColor(red:0.14, green:0.14, blue:0.14, alpha:1.00)
     let darkGraySpotifyColor = UIColor(red: 19/255.0, green: 20/255.0, blue: 20/255.0, alpha: 1.0)
     
     override func viewDidLoad() {
-        super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         settings.style.buttonBarBackgroundColor = graySpotifyColor
-        settings.style.buttonBarItemBackgroundColor = UIColor(red:0.95, green:0.95, blue:0.95, alpha:1.00)
+        settings.style.buttonBarItemBackgroundColor = graySpotifyColor
         settings.style.buttonBarItemFont = UIFont(name: "HelveticaNeue-Light", size:14) ?? UIFont.systemFontOfSize(14)
         settings.style.selectedBarHeight = 3.0
         settings.style.buttonBarMinimumLineSpacing = 0
@@ -35,6 +34,23 @@ class NicoAppTabController: ButtonBarPagerTabStripViewController {
             guard changeCurrentIndex == true else { return }
             oldCell?.label.textColor = UIColor(red: 138/255.0, green: 138/255.0, blue: 144/255.0, alpha: 1.0)
             newCell?.label.textColor = .whiteColor()
+        }
+        super.viewDidLoad()
+        
+        let superview = view
+        buttonBarView.snp_makeConstraints { make in
+            make.top.equalTo(snp_topLayoutGuideBottom)
+            make.left.equalTo(superview)
+            make.right.equalTo(superview)
+            make.height.equalTo(settings.style.buttonBarHeight ?? 44)
+        }
+        
+        automaticallyAdjustsScrollViewInsets = false
+        containerView.snp_makeConstraints { make in
+            make.top.equalTo(buttonBarView.snp_bottom)
+            make.left.equalTo(superview)
+            make.right.equalTo(superview)
+            make.bottom.equalTo(superview)
         }
     }
 

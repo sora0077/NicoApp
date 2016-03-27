@@ -13,6 +13,7 @@ import RelayoutKit
 import SDWebImage
 import SnapKit
 import NicoEntity
+import TLYShyNavBar
 
 import NicoAPI
 
@@ -63,6 +64,10 @@ class RankingVideoRow<T: UITableViewCell where T: RankingVideoRowRenderer>: Tabl
     }
 }
 
+func lazy<T>(block: () -> T) -> T {
+    return block()
+}
+
 class RankingListViewController: UIViewController {
     
     private let disposeBag = DisposeBag()
@@ -90,11 +95,15 @@ class RankingListViewController: UIViewController {
         let superview = view
         view.addSubview(tableView)
         tableView.snp_makeConstraints { make in
-            make.edges.equalTo(superview).inset(0)
+            make.top.equalTo(superview)
+            make.left.equalTo(superview)
+            make.right.equalTo(superview)
+            make.bottom.equalTo(superview)
         }
         tableView.controller(self)
+        tableView.rowHeight = 108
         
-        tableView.addSubview(refreshControl)
+        tableView.insertSubview(refreshControl, atIndex: 0)
         
         
         let category = self.category
@@ -124,7 +133,6 @@ class RankingListViewController: UIViewController {
                 
             }
             .addDisposableTo(disposeBag)
-        
         
     }
 

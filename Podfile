@@ -18,6 +18,7 @@ target 'NicoApp' do
   pod 'Timepiece'
   pod 'XLPagerTabStrip'
   pod 'SnapKit'
+  pod 'TLYShyNavBar'
   pod 'RelayoutKit', :git => 'https://github.com/sora0077/RelayoutKit.git'
   pod 'WindowKit', :git => 'https://github.com/sora0077/WindowKit.git'
   pod 'SDWebImage'

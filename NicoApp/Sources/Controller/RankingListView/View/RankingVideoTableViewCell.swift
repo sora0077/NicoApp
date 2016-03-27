@@ -10,7 +10,11 @@ import UIKit
 
 class RankingVideoTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var thumbnailImageView: UIImageView!
+    @IBOutlet weak var thumbnailImageView: UIImageView! {
+        didSet {
+            thumbnailImageView.backgroundColor = UIColor(red:0.14, green:0.14, blue:0.14, alpha:1.00)
+        }
+    }
     
     @IBOutlet weak var titleLabel: UILabel!
 

@@ -72,7 +72,6 @@ public final class RankingRepositoryImpl: RankingRepository {
             }.subscribeOn(mainScheduler)
         }
         
-        
         func get() -> Observable<[Video]> {
             return client
                 .start {
