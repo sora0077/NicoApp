@@ -79,7 +79,7 @@ public final class RankingRepositoryImpl: RankingRepository {
                     self.client.request(GetRanking(target: target, period: period, category: category))
                 }
                 .flatMap { ids in
-                    self.client.request(DebugRequest(GetThumbInfo<VideoImpl>(videos: ids)))
+                    self.client.request(GetThumbInfo<VideoImpl>(videos: ids))
                 }
                 .observeOn(backgroundScheduler)
                 .map { videos -> String in
@@ -110,6 +110,7 @@ public final class RankingRepositoryImpl: RankingRepository {
                 .observeOn(mainScheduler)
                 .map { id in
                     let realm = try Realm()
+                    realm.refresh()
                     let ref = realm.objectForPrimaryKey(RefRanking.self, key: id)!
                     return ref.items.map { $0 }
                 }

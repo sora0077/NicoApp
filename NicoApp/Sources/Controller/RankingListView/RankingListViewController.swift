@@ -11,6 +11,7 @@ import RxSwift
 import RxCocoa
 import RelayoutKit
 import SDWebImage
+import SnapKit
 import NicoEntity
 
 import NicoAPI
@@ -69,7 +70,7 @@ class RankingListViewController: UIViewController {
     private let category: GetRanking.Category
     private let period: GetRanking.Period
     
-    
+    private let refreshControl = UIRefreshControl()
     private let tableView = UITableView()
     
     init(category: GetRanking.Category, period: GetRanking.Period) {
@@ -86,15 +87,35 @@ class RankingListViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        tableView.frame = view.bounds
+        let superview = view
         view.addSubview(tableView)
+        tableView.snp_makeConstraints { make in
+            make.edges.equalTo(superview).inset(0)
+        }
         tableView.controller(self)
         
-        domain.repository.ranking
-            .list(category, period: period, target: .Total)
-            .asDriver(onErrorJustReturn: [])
+        tableView.addSubview(refreshControl)
+        
+        
+        let category = self.category
+        let period = self.period
+        refreshControl.rx_controlEvent(.ValueChanged)
+            .asDriver()
+            .startWith()
+            .flatMap {
+                domain.repository.ranking
+                    .list(category, period: period, target: .Total)
+                    .doOnError { error in
+                        print(error)
+                    }
+                    .asDriver(onErrorJustReturn: [])
+            }
             .driveNext { [weak self] videos in
                 guard let `self` = self else { return }
+                
+                async_after(0.3) {
+                    self.refreshControl.endRefreshing()
+                }
                 
                 self.tableView.flush()
                 self.tableView.extend(videos.map {
@@ -103,6 +124,8 @@ class RankingListViewController: UIViewController {
                 
             }
             .addDisposableTo(disposeBag)
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

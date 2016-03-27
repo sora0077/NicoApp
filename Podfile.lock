@@ -18,6 +18,7 @@ PODS:
   - SDWebImage (3.7.5):
     - SDWebImage/Core (= 3.7.5)
   - SDWebImage/Core (3.7.5)
+  - SnapKit (0.20.0)
   - Timepiece (0.4.2)
   - WindowKit (0.0.1)
   - XLPagerTabStrip (5.0.0)
@@ -32,6 +33,7 @@ DEPENDENCIES:
   - RxCocoa
   - RxSwift
   - SDWebImage
+  - SnapKit
   - Timepiece
   - WindowKit (from `https://github.com/sora0077/WindowKit.git`)
   - XLPagerTabStrip
@@ -62,6 +64,7 @@ SPEC CHECKSUMS:
   RxCocoa: a2baaf3462b989559a51dce59d78fbebb8fe0afa
   RxSwift: 829b2843e9eddc77a02cb3f5117f0d55f8f646f1
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
+  SnapKit: 5fce3c1bbbf1fbd31de9aa92f33eb9fa03f15650
   Timepiece: cf53bb908bf542acc0e3d5f69cabfed869df4ebd
   WindowKit: 860fb9c6cabcb0402fca02ad271d413ade7ae4e9
   XLPagerTabStrip: 87b8b705f9a7178e76a063ffaa2d70045944a965

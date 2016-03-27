@@ -26,6 +26,10 @@ func window(layer: WindowLayer) -> UIWindow {
     return (UIApplication.sharedApplication().delegate as! AppDelegate).manager[layer]
 }
 
+func async_after(sec: Double, _ block: () -> Void) {
+    let when = dispatch_time(DISPATCH_TIME_NOW, Int64(sec * Double(NSEC_PER_SEC)))
+    dispatch_after(when, dispatch_get_main_queue(), block)
+}
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

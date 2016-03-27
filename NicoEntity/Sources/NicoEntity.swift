@@ -48,6 +48,10 @@ func convertBool(v: String) throws -> Bool {
 
 func convertInt(v: String) throws -> Int {
     
+    if v.isEmpty {
+        return 0
+    }
+    
     if let int = Int(v) {
         return int
     }
