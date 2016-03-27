@@ -13,3 +13,18 @@ import RxSwift
 import RxAPISchema
 import NicoRepository
 
+
+public final class VideoRepositoryImpl: VideoRepository {
+    
+    private let client: Client
+    
+    public init(client: Client) {
+        self.client = client
+    }
+    
+    public func cache(id: String) -> Video? {
+        
+        let realm = try? Realm()
+        return realm?.objectForPrimaryKey(VideoImpl.self, key: id)
+    }
+}

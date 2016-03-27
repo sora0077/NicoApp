@@ -17,9 +17,27 @@ import Timepiece
 import NicoRepository
 
 
+private func ==(lhs: RankingRepositoryImpl.TokenKey, rhs: RankingRepositoryImpl.TokenKey) -> Bool {
+    return lhs.category == rhs.category
+    && lhs.period == rhs.period
+    && lhs.target == rhs.target
+}
+
+
 public final class RankingRepositoryImpl: RankingRepository {
     
+    private struct TokenKey: Hashable {
+        var category: GetRanking.Category
+        var period: GetRanking.Category
+        var target: GetRanking.Target
+        
+        private var hashValue: Int {
+            return "\(category)-\(period)-\(target)".hashValue
+        }
+    }
+    
     private let client: Client
+    private var tokens: [TokenKey: NotificationToken] = [:]
     
     public init(client: Client) {
         self.client = client

@@ -9,9 +9,17 @@ use_frameworks!
 target 'NicoApp' do
   pod 'Fuzi'
   pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'RealmSwift'
+  pod 'Himotoki'
+  pod 'Fuzi'
+  pod 'RxAPISchema'
   pod 'QueryKit'
+  pod 'Timepiece'
   pod 'XLPagerTabStrip'
+  pod 'RelayoutKit', :git => 'https://github.com/sora0077/RelayoutKit.git'
   pod 'WindowKit', :git => 'https://github.com/sora0077/WindowKit.git'
+  pod 'SDWebImage'
 end
 
 target 'NicoAppTests' do

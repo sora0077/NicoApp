@@ -14,6 +14,8 @@ public protocol Repository {
     
     var session: SessionRepository { get }
     
+    var video: VideoRepository { get }
+    
     var ranking: RankingRepository { get }
 }
 

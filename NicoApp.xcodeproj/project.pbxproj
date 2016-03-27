@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02658DDD51C30512A24A3C56 /* Pods_NicoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0E3EC0F29F3964F02F1C2FF /* Pods_NicoApp.framework */; };
 		2EDB4AAAC8FE6C0DC539726C /* Pods_NicoAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F2236714DC4DE21811621DB /* Pods_NicoAPI.framework */; };
 		5C15A8D588603D13A493A7F7 /* Pods_NicoRepository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 201BA8D65B440C3FA1AFAB62 /* Pods_NicoRepository.framework */; };
 		C46CA02A4E49C5C2B222E726 /* Pods_NicoDomainImpl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B69A3331D715391C2E34D4B5 /* Pods_NicoDomainImpl.framework */; };
@@ -18,12 +17,12 @@
 		D9193B491C78B65C00EAA0CB /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9193B481C78B65C00EAA0CB /* Video.swift */; };
 		D9193B4B1C78B68500EAA0CB /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9193B4A1C78B68500EAA0CB /* Session.swift */; };
 		D9193B741C79410F00EAA0CB /* GetRanking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9193B731C79410F00EAA0CB /* GetRanking.swift */; };
+		D939EC531CA43F27004DC1C9 /* EntryPointController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D939EC521CA43F26004DC1C9 /* EntryPointController.swift */; };
+		D939EC581CA6EA0A004DC1C9 /* RankingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D939EC571CA6EA0A004DC1C9 /* RankingListViewController.swift */; };
 		D94BA5121C709A72007A66E2 /* VideoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94BA5111C709A72007A66E2 /* VideoRepository.swift */; };
 		D94BA5131C709B5F007A66E2 /* NicoEntity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95634111C702C9500550C70 /* NicoEntity.framework */; };
 		D94BA5161C70A032007A66E2 /* NicoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94BA5151C70A032007A66E2 /* NicoAPI.swift */; };
 		D95633DF1C702C7A00550C70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95633DE1C702C7A00550C70 /* AppDelegate.swift */; };
-		D95633E11C702C7A00550C70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95633E01C702C7A00550C70 /* ViewController.swift */; };
-		D95633E41C702C7A00550C70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D95633E21C702C7A00550C70 /* Main.storyboard */; };
 		D95633E61C702C7A00550C70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D95633E51C702C7A00550C70 /* Assets.xcassets */; };
 		D95633E91C702C7A00550C70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D95633E71C702C7A00550C70 /* LaunchScreen.storyboard */; };
 		D95633F41C702C7A00550C70 /* NicoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95633F31C702C7A00550C70 /* NicoAppTests.swift */; };
@@ -89,6 +88,11 @@
 		D9CF2FC91CA193CB0079F83D /* NicoRepository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95634561C702CB800550C70 /* NicoRepository.framework */; };
 		D9CF2FCA1CA193D00079F83D /* NicoAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95634341C702C9F00550C70 /* NicoAPI.framework */; };
 		D9E363E91CA41F9E00BB4719 /* SessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E363E81CA41F9E00BB4719 /* SessionRepository.swift */; };
+		D9E940BD1CA7AB4300B36F5B /* Pods_NicoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0E3EC0F29F3964F02F1C2FF /* Pods_NicoApp.framework */; };
+		D9E940BE1CA7AB4300B36F5B /* Pods_NicoApp.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E0E3EC0F29F3964F02F1C2FF /* Pods_NicoApp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D9E940C11CA7C21100B36F5B /* VideoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E940C01CA7C21100B36F5B /* VideoRepository.swift */; };
+		D9E940C41CA7E46900B36F5B /* RankingVideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E940C21CA7E46900B36F5B /* RankingVideoTableViewCell.swift */; };
+		D9E940C51CA7E46900B36F5B /* RankingVideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9E940C31CA7E46900B36F5B /* RankingVideoTableViewCell.xib */; };
 		E8CFABA8ACE6388157F3DE6A /* Pods_NicoEntity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7AC8A83BCC3ECB8274F5023 /* Pods_NicoEntity.framework */; };
 		EABD65DB6B75D9E211CF1403 /* Pods_NicoDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7863330B063160D7B0B44D /* Pods_NicoDomain.framework */; };
 		EF55A28FE1FC1A6AD0487618 /* Pods_NicoRepositoryImpl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 999A6DDFA1F04BADC0AF2C43 /* Pods_NicoRepositoryImpl.framework */; };
@@ -266,6 +270,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				D956344A1C702CA000550C70 /* NicoAPI.framework in Embed Frameworks */,
+				D9E940BE1CA7AB4300B36F5B /* Pods_NicoApp.framework in Embed Frameworks */,
 				D956348E1C702CC100550C70 /* NicoDomain.framework in Embed Frameworks */,
 				D95634B71C702DFD00550C70 /* NicoDomainImpl.framework in Embed Frameworks */,
 				D95634D91C702E0700550C70 /* NicoRepositoryImpl.framework in Embed Frameworks */,
@@ -303,12 +308,12 @@
 		D9193B481C78B65C00EAA0CB /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		D9193B4A1C78B68500EAA0CB /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		D9193B731C79410F00EAA0CB /* GetRanking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRanking.swift; sourceTree = "<group>"; };
+		D939EC521CA43F26004DC1C9 /* EntryPointController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryPointController.swift; sourceTree = "<group>"; };
+		D939EC571CA6EA0A004DC1C9 /* RankingListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingListViewController.swift; sourceTree = "<group>"; };
 		D94BA5111C709A72007A66E2 /* VideoRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoRepository.swift; sourceTree = "<group>"; };
 		D94BA5151C70A032007A66E2 /* NicoAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NicoAPI.swift; sourceTree = "<group>"; };
 		D95633DB1C702C7A00550C70 /* NicoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NicoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D95633DE1C702C7A00550C70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D95633E01C702C7A00550C70 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D95633E31C702C7A00550C70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D95633E51C702C7A00550C70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D95633E81C702C7A00550C70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D95633EA1C702C7A00550C70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -379,6 +384,9 @@
 		D9CF2FC31CA18F7C0079F83D /* NicoDomain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NicoDomain.swift; sourceTree = "<group>"; };
 		D9CF2FC51CA190E10079F83D /* Domain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Domain.swift; sourceTree = "<group>"; };
 		D9E363E81CA41F9E00BB4719 /* SessionRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionRepository.swift; sourceTree = "<group>"; };
+		D9E940C01CA7C21100B36F5B /* VideoRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoRepository.swift; sourceTree = "<group>"; };
+		D9E940C21CA7E46900B36F5B /* RankingVideoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingVideoTableViewCell.swift; sourceTree = "<group>"; };
+		D9E940C31CA7E46900B36F5B /* RankingVideoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RankingVideoTableViewCell.xib; sourceTree = "<group>"; };
 		E0E3EC0F29F3964F02F1C2FF /* Pods_NicoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NicoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAC9877E6761A1550D97E29F /* Pods-NicoDomainImpl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NicoDomainImpl.release.xcconfig"; path = "Pods/Target Support Files/Pods-NicoDomainImpl/Pods-NicoDomainImpl.release.xcconfig"; sourceTree = "<group>"; };
 		F1E6E4FAACC68E16E3D07F15 /* Pods-NicoRepository.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NicoRepository.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NicoRepository/Pods-NicoRepository.debug.xcconfig"; sourceTree = "<group>"; };
@@ -391,13 +399,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D95634491C702CA000550C70 /* NicoAPI.framework in Frameworks */,
+				D9E940BD1CA7AB4300B36F5B /* Pods_NicoApp.framework in Frameworks */,
 				D956348D1C702CC100550C70 /* NicoDomain.framework in Frameworks */,
 				D95634B61C702DFD00550C70 /* NicoDomainImpl.framework in Frameworks */,
 				D95634D81C702E0700550C70 /* NicoRepositoryImpl.framework in Frameworks */,
 				D95634261C702C9500550C70 /* NicoEntity.framework in Frameworks */,
 				D956346B1C702CB800550C70 /* NicoRepository.framework in Frameworks */,
 				D95634FA1C702E1800550C70 /* NicoEnvironment.framework in Frameworks */,
-				02658DDD51C30512A24A3C56 /* Pods_NicoApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,6 +602,7 @@
 		D9418E941CA42FE800B5379D /* EntryPointView */ = {
 			isa = PBXGroup;
 			children = (
+				D939EC521CA43F26004DC1C9 /* EntryPointController.swift */,
 			);
 			path = EntryPointView;
 			sourceTree = "<group>";
@@ -601,6 +610,8 @@
 		D9418E951CA4311800B5379D /* RankingListView */ = {
 			isa = PBXGroup;
 			children = (
+				D9E940BF1CA7BAB000B36F5B /* View */,
+				D939EC571CA6EA0A004DC1C9 /* RankingListViewController.swift */,
 			);
 			path = RankingListView;
 			sourceTree = "<group>";
@@ -660,8 +671,6 @@
 			children = (
 				D9E363EA1CA42C6400BB4719 /* Sources */,
 				D95633DE1C702C7A00550C70 /* AppDelegate.swift */,
-				D95633E01C702C7A00550C70 /* ViewController.swift */,
-				D95633E21C702C7A00550C70 /* Main.storyboard */,
 				D95633E51C702C7A00550C70 /* Assets.xcassets */,
 				D95633E71C702C7A00550C70 /* LaunchScreen.storyboard */,
 				D95633EA1C702C7A00550C70 /* Info.plist */,
@@ -853,6 +862,7 @@
 				D9B1F51C1C7379AA00F62FB5 /* NicoRepository.swift */,
 				D9CF2FBF1CA189900079F83D /* RankingRepository.swift */,
 				D9E363E81CA41F9E00BB4719 /* SessionRepository.swift */,
+				D9E940C01CA7C21100B36F5B /* VideoRepository.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -917,6 +927,15 @@
 				D9418E931CA42FCC00B5379D /* Controller */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		D9E940BF1CA7BAB000B36F5B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D9E940C21CA7E46900B36F5B /* RankingVideoTableViewCell.swift */,
+				D9E940C31CA7E46900B36F5B /* RankingVideoTableViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1428,9 +1447,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9E940C51CA7E46900B36F5B /* RankingVideoTableViewCell.xib in Resources */,
 				D95633E91C702C7A00550C70 /* LaunchScreen.storyboard in Resources */,
 				D95633E61C702C7A00550C70 /* Assets.xcassets in Resources */,
-				D95633E41C702C7A00550C70 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1781,8 +1800,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D95633E11C702C7A00550C70 /* ViewController.swift in Sources */,
+				D939EC531CA43F27004DC1C9 /* EntryPointController.swift in Sources */,
 				D95633DF1C702C7A00550C70 /* AppDelegate.swift in Sources */,
+				D9E940C41CA7E46900B36F5B /* RankingVideoTableViewCell.swift in Sources */,
+				D939EC581CA6EA0A004DC1C9 /* RankingListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1852,6 +1873,7 @@
 				D9CF2FC01CA189900079F83D /* RankingRepository.swift in Sources */,
 				D9E363E91CA41F9E00BB4719 /* SessionRepository.swift in Sources */,
 				D9B1F51D1C7379AA00F62FB5 /* NicoRepository.swift in Sources */,
+				D9E940C11CA7C21100B36F5B /* VideoRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2056,14 +2078,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D95633E21C702C7A00550C70 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D95633E31C702C7A00550C70 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D95633E71C702C7A00550C70 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

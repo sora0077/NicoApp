@@ -12,30 +12,34 @@ import NicoDomainImpl
 import RealmSwift
 import RxSwift
 import RxAPISchema
+import WindowKit
  
 
 let domain: Domain = DomainImpl(client: Client())
+ 
+enum WindowLayer: Int, WindowLevel {
+    case player = 1
+    case alert
+}
+
+func window(layer: WindowLayer) -> UIWindow {
+    return (UIApplication.sharedApplication().delegate as! AppDelegate).manager[layer]
+}
 
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-    private let disposeBag = DisposeBag()
+    private lazy var manager: Manager<WindowLayer> = Manager<WindowLayer>(keyWindow: self.window!)
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-
-        dispatch_async(dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0)) {
-            
-            domain.repository.ranking.list(.Game, period: .Hourly, target: .Total)
-                .subscribeNext { videos in
-                    print(NSThread.currentThread())
-                    print(videos)
-                }
-                .addDisposableTo(self.disposeBag)
-        }
+        
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        window?.rootViewController = EntryPointController()
+        window?.makeKeyAndVisible()
+        
         return true
     }
 

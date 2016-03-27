@@ -20,6 +20,8 @@ public final class RepositoryImpl: Repository {
     private let client: Client
     
     public private(set) lazy var session: SessionRepository = SessionRepositoryImpl(client: self.client)
+    
+    public private(set) lazy var video: VideoRepository = VideoRepositoryImpl(client: self.client)
 
     public private(set) lazy var ranking: RankingRepository = RankingRepositoryImpl(client: self.client)
 

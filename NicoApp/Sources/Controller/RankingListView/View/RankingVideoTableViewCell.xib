@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="124" id="yec-Zm-mpT" customClass="RankingVideoTableViewCell" customModule="NicoApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="124"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yec-Zm-mpT" id="aVA-VJ-m33">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="123"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="abcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdef" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3BS-oe-Iwh">
+                        <rect key="frame" x="136" y="34" width="173" height="58"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SDB-Bo-RF5">
+                        <rect key="frame" x="136" y="16" width="29" height="14"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h5O-pg-1KO">
+                        <rect key="frame" x="8" y="16" width="120" height="90"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="h5O-pg-1KO" secondAttribute="height" multiplier="4:3" id="9ZQ-iw-we8"/>
+                            <constraint firstAttribute="width" constant="120" id="moM-g1-fp1"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="SDB-Bo-RF5" firstAttribute="leading" secondItem="h5O-pg-1KO" secondAttribute="trailing" constant="8" id="20v-M7-1BW"/>
+                    <constraint firstItem="h5O-pg-1KO" firstAttribute="leading" secondItem="aVA-VJ-m33" secondAttribute="leading" constant="8" id="43g-CP-1Xu"/>
+                    <constraint firstItem="SDB-Bo-RF5" firstAttribute="top" secondItem="h5O-pg-1KO" secondAttribute="top" id="Mi6-oX-79R"/>
+                    <constraint firstItem="h5O-pg-1KO" firstAttribute="centerY" secondItem="aVA-VJ-m33" secondAttribute="centerY" id="anr-kb-QTH"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="3BS-oe-Iwh" secondAttribute="bottom" constant="8" id="cPJ-UB-1QH"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="h5O-pg-1KO" secondAttribute="bottom" constant="16" id="h8t-0T-GkY"/>
+                    <constraint firstItem="3BS-oe-Iwh" firstAttribute="leading" secondItem="h5O-pg-1KO" secondAttribute="trailing" constant="8" id="hCA-14-fJ5"/>
+                    <constraint firstItem="3BS-oe-Iwh" firstAttribute="top" secondItem="SDB-Bo-RF5" secondAttribute="bottom" constant="4" id="i4F-hB-DUm"/>
+                    <constraint firstItem="3BS-oe-Iwh" firstAttribute="leading" secondItem="SDB-Bo-RF5" secondAttribute="leading" id="lsS-3C-Mzg"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3BS-oe-Iwh" secondAttribute="trailing" constant="8" id="qzg-hN-stI"/>
+                    <constraint firstItem="3BS-oe-Iwh" firstAttribute="top" secondItem="h5O-pg-1KO" secondAttribute="top" id="rJ2-3U-raJ"/>
+                    <constraint firstItem="h5O-pg-1KO" firstAttribute="top" relation="greaterThanOrEqual" secondItem="aVA-VJ-m33" secondAttribute="top" constant="16" id="yxS-er-lJg"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="hCA-14-fJ5"/>
+                        <exclude reference="rJ2-3U-raJ"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="thumbnailImageView" destination="h5O-pg-1KO" id="RsM-bl-RzJ"/>
+                <outlet property="titleLabel" destination="3BS-oe-Iwh" id="UTF-g5-qjL"/>
+            </connections>
+            <point key="canvasLocation" x="150" y="374"/>
+        </tableViewCell>
+    </objects>
+</document>
