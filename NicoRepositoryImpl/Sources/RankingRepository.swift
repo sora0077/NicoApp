@@ -107,12 +107,12 @@ public final class RankingRepositoryImpl: RankingRepository {
                     }
                     return ref.id
                 }
+                .observeOn(mainScheduler)
                 .map { id in
                     let realm = try Realm()
                     let ref = realm.objectForPrimaryKey(RefRanking.self, key: id)!
                     return ref.items.map { $0 }
                 }
-                .subscribeOn(mainScheduler)
         }
         
         return cache() ?? get()

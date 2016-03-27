@@ -41,7 +41,7 @@
                     <constraint firstItem="SDB-Bo-RF5" firstAttribute="top" secondItem="h5O-pg-1KO" secondAttribute="top" id="Mi6-oX-79R"/>
                     <constraint firstItem="h5O-pg-1KO" firstAttribute="centerY" secondItem="aVA-VJ-m33" secondAttribute="centerY" id="anr-kb-QTH"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="3BS-oe-Iwh" secondAttribute="bottom" constant="8" id="cPJ-UB-1QH"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="h5O-pg-1KO" secondAttribute="bottom" constant="16" id="h8t-0T-GkY"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="h5O-pg-1KO" secondAttribute="bottom" priority="750" constant="16" id="h8t-0T-GkY"/>
                     <constraint firstItem="3BS-oe-Iwh" firstAttribute="leading" secondItem="h5O-pg-1KO" secondAttribute="trailing" constant="8" id="hCA-14-fJ5"/>
                     <constraint firstItem="3BS-oe-Iwh" firstAttribute="top" secondItem="SDB-Bo-RF5" secondAttribute="bottom" constant="4" id="i4F-hB-DUm"/>
                     <constraint firstItem="3BS-oe-Iwh" firstAttribute="leading" secondItem="SDB-Bo-RF5" secondAttribute="leading" id="lsS-3C-Mzg"/>

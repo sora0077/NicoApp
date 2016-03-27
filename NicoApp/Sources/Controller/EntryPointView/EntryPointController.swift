@@ -13,7 +13,7 @@ final class EntryPointController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let vc = RankingListViewController(category: .Game, period: .Hourly)
+        let vc = NicoAppTabController()
         addChildViewController(vc)
         vc.view.frame = view.bounds
         view.addSubview(vc.view)

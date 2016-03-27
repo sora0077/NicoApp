@@ -17,6 +17,7 @@
 		D9193B491C78B65C00EAA0CB /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9193B481C78B65C00EAA0CB /* Video.swift */; };
 		D9193B4B1C78B68500EAA0CB /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9193B4A1C78B68500EAA0CB /* Session.swift */; };
 		D9193B741C79410F00EAA0CB /* GetRanking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9193B731C79410F00EAA0CB /* GetRanking.swift */; };
+		D920BF061CA80B510001FECA /* NicoAppTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D920BF051CA80B510001FECA /* NicoAppTabController.swift */; };
 		D939EC531CA43F27004DC1C9 /* EntryPointController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D939EC521CA43F26004DC1C9 /* EntryPointController.swift */; };
 		D939EC581CA6EA0A004DC1C9 /* RankingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D939EC571CA6EA0A004DC1C9 /* RankingListViewController.swift */; };
 		D94BA5121C709A72007A66E2 /* VideoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94BA5111C709A72007A66E2 /* VideoRepository.swift */; };
@@ -308,6 +309,7 @@
 		D9193B481C78B65C00EAA0CB /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		D9193B4A1C78B68500EAA0CB /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		D9193B731C79410F00EAA0CB /* GetRanking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRanking.swift; sourceTree = "<group>"; };
+		D920BF051CA80B510001FECA /* NicoAppTabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NicoAppTabController.swift; sourceTree = "<group>"; };
 		D939EC521CA43F26004DC1C9 /* EntryPointController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryPointController.swift; sourceTree = "<group>"; };
 		D939EC571CA6EA0A004DC1C9 /* RankingListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingListViewController.swift; sourceTree = "<group>"; };
 		D94BA5111C709A72007A66E2 /* VideoRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoRepository.swift; sourceTree = "<group>"; };
@@ -925,6 +927,7 @@
 			isa = PBXGroup;
 			children = (
 				D9418E931CA42FCC00B5379D /* Controller */,
+				D920BF051CA80B510001FECA /* NicoAppTabController.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -1800,6 +1803,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D920BF061CA80B510001FECA /* NicoAppTabController.swift in Sources */,
 				D939EC531CA43F27004DC1C9 /* EntryPointController.swift in Sources */,
 				D95633DF1C702C7A00550C70 /* AppDelegate.swift in Sources */,
 				D9E940C41CA7E46900B36F5B /* RankingVideoTableViewCell.swift in Sources */,
