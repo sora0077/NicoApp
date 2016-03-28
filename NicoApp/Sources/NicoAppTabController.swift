@@ -9,11 +9,14 @@
 import UIKit
 import SnapKit
 import XLPagerTabStrip
+import RxSwift
 
 class NicoAppTabController: ButtonBarPagerTabStripViewController {
     
     let graySpotifyColor = UIColor(red:0.14, green:0.14, blue:0.14, alpha:1.00)
     let darkGraySpotifyColor = UIColor(red: 19/255.0, green: 20/255.0, blue: 20/255.0, alpha: 1.0)
+    
+    private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
 
@@ -74,12 +77,6 @@ class NicoAppTabController: ButtonBarPagerTabStripViewController {
     
     func updateBarButtons() {
         
-        let account = UIBarButtonItem()
-        account.setFAIcon(.FAUser, iconSize: 20)
-        account.tintColor = .whiteColor()
-        account.target = self
-        account.action = #selector(NicoAppTabController.loginAction)
-        
         let spacer = UIBarButtonItem(barButtonSystemItem: .FixedSpace, target: nil, action: nil)
         spacer.width = 16
         
@@ -89,9 +86,21 @@ class NicoAppTabController: ButtonBarPagerTabStripViewController {
         
         if let s = try? domain.repository.session.session(), session = s {
             print(session)
-            navigationItem.rightBarButtonItems = [search]
+            let account = UIBarButtonItem()
+            account.setFAIcon(.FAPowerOff, iconSize: 20)
+            account.tintColor = .whiteColor()
+            account.target = self
+            account.action = #selector(NicoAppTabController.logoutAction)
+            
+            navigationItem.setRightBarButtonItems([account, spacer, search], animated: true)
         } else {
-            navigationItem.rightBarButtonItems = [account, spacer, search]
+            let account = UIBarButtonItem()
+            account.setFAIcon(.FAUser, iconSize: 20)
+            account.tintColor = .whiteColor()
+            account.target = self
+            account.action = #selector(NicoAppTabController.loginAction)
+            
+            navigationItem.setRightBarButtonItems([account, spacer, search], animated: true)
         }
     }
 }
@@ -102,7 +111,12 @@ extension NicoAppTabController {
         
         let vc = LoginViewController()
         presentViewController(vc, animated: true, completion: nil)
+    }
+    
+    @objc func logoutAction() {
         
-        
+        domain.repository.session.logout().subscribeNext { [weak self] in
+            self?.updateBarButtons()
+        }.addDisposableTo(disposeBag)
     }
 }

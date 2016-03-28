@@ -16,5 +16,7 @@ public protocol SessionRepository {
     func session() throws -> Session?
     
     func login(mailaddress mailaddress: String, password: String) -> Observable<Session>
+
+    func logout() -> Observable<Void>
 }
 

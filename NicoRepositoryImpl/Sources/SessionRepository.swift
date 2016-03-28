@@ -46,4 +46,21 @@ public final class SessionRepositoryImpl: SessionRepository {
                 return session
             }
     }
+    
+    public func logout() -> Observable<Void> {
+        return Observable.create { observer in
+            do {
+                let realm = try Realm()
+                try realm.write {
+                    realm.delete(realm.objects(SessionImpl))
+                }
+                observer.onNext()
+                observer.onCompleted()
+            } catch {
+                observer.onError(error)
+            }
+            
+            return NopDisposable.instance
+        }
+    }
 }
