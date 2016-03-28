@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="JBV-TN-GPA" customClass="LoginContentView" customModule="NicoApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="8hJ-KY-pAu">
+                    <rect key="frame" x="0.0" y="64" width="375" height="114"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DGX-YK-qR6">
+                    <rect key="frame" x="16" y="258" width="343" height="44"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="fIh-6S-KJa"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGa-jK-hpp">
+                    <rect key="frame" x="78" y="338" width="220" height="56"/>
+                    <color key="backgroundColor" red="0.1137254902" green="0.1137254902" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="220" id="Sjf-RW-9gy"/>
+                        <constraint firstAttribute="height" constant="56" id="fiy-6B-lhb"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                    <state key="normal" title="ログイン">
+                        <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                    </state>
+                </button>
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JGd-R9-eIx">
+                    <rect key="frame" x="16" y="206" width="343" height="44"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Dvl-E0-uSV"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="JGd-R9-eIx" firstAttribute="top" secondItem="8hJ-KY-pAu" secondAttribute="bottom" constant="24" id="2iG-yO-ngC"/>
+                <constraint firstItem="cGa-jK-hpp" firstAttribute="top" secondItem="DGX-YK-qR6" secondAttribute="bottom" constant="36" id="5RR-H0-nDS"/>
+                <constraint firstItem="cGa-jK-hpp" firstAttribute="top" secondItem="JGd-R9-eIx" secondAttribute="bottom" constant="12" id="5Yp-TL-ut2"/>
+                <constraint firstAttribute="trailing" secondItem="8hJ-KY-pAu" secondAttribute="trailing" id="8Qk-kj-7pn"/>
+                <constraint firstItem="DGX-YK-qR6" firstAttribute="leading" secondItem="JBV-TN-GPA" secondAttribute="leading" constant="16" id="AUj-iO-Zdh"/>
+                <constraint firstItem="DGX-YK-qR6" firstAttribute="top" secondItem="JGd-R9-eIx" secondAttribute="bottom" constant="12" id="Aay-zz-tFz"/>
+                <constraint firstItem="8hJ-KY-pAu" firstAttribute="top" secondItem="JBV-TN-GPA" secondAttribute="top" constant="64" id="I2Q-Z7-71W"/>
+                <constraint firstItem="cGa-jK-hpp" firstAttribute="centerX" secondItem="JBV-TN-GPA" secondAttribute="centerX" id="IBU-p2-Qza"/>
+                <constraint firstAttribute="trailing" secondItem="DGX-YK-qR6" secondAttribute="trailing" constant="16" id="ffM-XA-0p1"/>
+                <constraint firstAttribute="trailing" secondItem="JGd-R9-eIx" secondAttribute="trailing" constant="16" id="gTj-QY-Hq7"/>
+                <constraint firstItem="cGa-jK-hpp" firstAttribute="top" secondItem="DGX-YK-qR6" secondAttribute="bottom" constant="36" id="lGE-mE-GZw"/>
+                <constraint firstItem="JGd-R9-eIx" firstAttribute="leading" secondItem="JBV-TN-GPA" secondAttribute="leading" constant="16" id="qtp-tq-7EV"/>
+                <constraint firstItem="8hJ-KY-pAu" firstAttribute="leading" secondItem="JBV-TN-GPA" secondAttribute="leading" id="s11-uB-baa"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="5RR-H0-nDS"/>
+                    <exclude reference="5Yp-TL-ut2"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="emailContainerView" destination="JGd-R9-eIx" id="lHO-OQ-XT2"/>
+                <outlet property="loginButton" destination="cGa-jK-hpp" id="xgS-l3-wG7"/>
+                <outlet property="passwordContainerView" destination="DGX-YK-qR6" id="C10-M8-diB"/>
+            </connections>
+            <point key="canvasLocation" x="241.5" y="351.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="logo" width="685" height="114"/>
+    </resources>
+</document>

@@ -73,6 +73,9 @@
 		D974D1341C8AE89C0090ADBB /* PaginationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D974D1331C8AE89C0090ADBB /* PaginationResponse.swift */; };
 		D98F06731C8B44600037D7A9 /* RankingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98F06721C8B44600037D7A9 /* RankingRepository.swift */; };
 		D98F06751C8C41B90037D7A9 /* SessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98F06741C8C41B90037D7A9 /* SessionRepository.swift */; };
+		D9A24D911CA97C3500050D5C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A24D901CA97C3500050D5C /* LoginViewController.swift */; };
+		D9A24D951CA9808A00050D5C /* LoginContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A24D931CA9808A00050D5C /* LoginContentView.swift */; };
+		D9A24D961CA9808A00050D5C /* LoginContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9A24D941CA9808A00050D5C /* LoginContentView.xib */; };
 		D9B1F5171C73795600F62FB5 /* NicoRepository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95634561C702CB800550C70 /* NicoRepository.framework */; };
 		D9B1F51D1C7379AA00F62FB5 /* NicoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B1F51C1C7379AA00F62FB5 /* NicoRepository.swift */; };
 		D9B1F51F1C73805F00F62FB5 /* NicoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B1F51E1C73805F00F62FB5 /* NicoEntity.swift */; };
@@ -375,6 +378,9 @@
 		D974D1331C8AE89C0090ADBB /* PaginationResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaginationResponse.swift; sourceTree = "<group>"; };
 		D98F06721C8B44600037D7A9 /* RankingRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingRepository.swift; sourceTree = "<group>"; };
 		D98F06741C8C41B90037D7A9 /* SessionRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionRepository.swift; sourceTree = "<group>"; };
+		D9A24D901CA97C3500050D5C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D9A24D931CA9808A00050D5C /* LoginContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginContentView.swift; sourceTree = "<group>"; };
+		D9A24D941CA9808A00050D5C /* LoginContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginContentView.xib; sourceTree = "<group>"; };
 		D9B1F51C1C7379AA00F62FB5 /* NicoRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NicoRepository.swift; sourceTree = "<group>"; };
 		D9B1F51E1C73805F00F62FB5 /* NicoEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NicoEntity.swift; sourceTree = "<group>"; };
 		D9C02E201CA2DBF90023DE2D /* RefRanking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefRanking.swift; sourceTree = "<group>"; };
@@ -595,6 +601,7 @@
 		D9418E931CA42FCC00B5379D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D9A24D8F1CA97C1400050D5C /* LoginView */,
 				D9418E951CA4311800B5379D /* RankingListView */,
 				D9418E941CA42FE800B5379D /* EntryPointView */,
 			);
@@ -905,6 +912,24 @@
 			children = (
 			);
 			name = "New Group";
+			sourceTree = "<group>";
+		};
+		D9A24D8F1CA97C1400050D5C /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				D9A24D921CA97EEA00050D5C /* View */,
+				D9A24D901CA97C3500050D5C /* LoginViewController.swift */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		D9A24D921CA97EEA00050D5C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D9A24D931CA9808A00050D5C /* LoginContentView.swift */,
+				D9A24D941CA9808A00050D5C /* LoginContentView.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		D9C02E1F1CA2DB0D0023DE2D /* EntityRef */ = {
@@ -1452,6 +1477,7 @@
 			files = (
 				D9E940C51CA7E46900B36F5B /* RankingVideoTableViewCell.xib in Resources */,
 				D95633E91C702C7A00550C70 /* LaunchScreen.storyboard in Resources */,
+				D9A24D961CA9808A00050D5C /* LoginContentView.xib in Resources */,
 				D95633E61C702C7A00550C70 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1803,6 +1829,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9A24D911CA97C3500050D5C /* LoginViewController.swift in Sources */,
+				D9A24D951CA9808A00050D5C /* LoginContentView.swift in Sources */,
 				D920BF061CA80B510001FECA /* NicoAppTabController.swift in Sources */,
 				D939EC531CA43F27004DC1C9 /* EntryPointController.swift in Sources */,
 				D95633DF1C702C7A00550C70 /* AppDelegate.swift in Sources */,

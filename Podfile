@@ -19,6 +19,8 @@ target 'NicoApp' do
   pod 'XLPagerTabStrip'
   pod 'SnapKit'
   pod 'TLYShyNavBar'
+  pod 'Font-Awesome-Swift'
+  pod 'JVFloatLabeledTextField'
   pod 'RelayoutKit', :git => 'https://github.com/sora0077/RelayoutKit.git'
   pod 'WindowKit', :git => 'https://github.com/sora0077/WindowKit.git'
   pod 'SDWebImage'

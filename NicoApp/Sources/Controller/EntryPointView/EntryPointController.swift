@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import Font_Awesome_Swift
 
 final class EntryPointController: UIViewController {
 

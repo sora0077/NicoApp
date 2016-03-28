@@ -34,7 +34,7 @@ public final class SessionRepositoryImpl: SessionRepository {
     public func login(mailaddress mailaddress: String, password: String) -> Observable<Session> {
         return client
             .start {
-                client.request(GetSession<SessionImpl>(mailaddress: mailaddress, password: password))
+                client.request(DebugRequest(GetSession<SessionImpl>(mailaddress: mailaddress, password: password)))
             }
             .map { session in
                 let realm = try Realm()

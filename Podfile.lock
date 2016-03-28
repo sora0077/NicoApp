@@ -1,7 +1,9 @@
 PODS:
   - Alamofire (3.3.0)
+  - Font-Awesome-Swift (1.4.6)
   - Fuzi (0.3.0)
   - Himotoki (1.7.0)
+  - JVFloatLabeledTextField (1.1.0)
   - QueryKit (0.12.1)
   - Realm (0.98.5):
     - Realm/Headers (= 0.98.5)
@@ -25,8 +27,10 @@ PODS:
   - XLPagerTabStrip (5.0.0)
 
 DEPENDENCIES:
+  - Font-Awesome-Swift
   - Fuzi
   - Himotoki
+  - JVFloatLabeledTextField
   - QueryKit
   - RealmSwift
   - RelayoutKit (from `https://github.com/sora0077/RelayoutKit.git`)
@@ -56,8 +60,10 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: 9054db4a1b1ca9e363223183e01cea380159a27c
+  Font-Awesome-Swift: a965c23e619514be65de9b113f49038ca683c1bb
   Fuzi: 4725b8743f0a92100108e013347bf32ca80d93a1
   Himotoki: a97b4a5861d6d25fc0746f0e19164eef03c19347
+  JVFloatLabeledTextField: ea4a3d8387ddd43724c472bb2b8ab39b79af05d4
   QueryKit: 6a8dbe9f33ffac00c424143695681a949b58518d
   Realm: db08379969e45cea2edd1c3c0a090fe9e22d2d2f
   RealmSwift: cb11ad1c35e15dc982f2dbf5afe2a3124193a358

@@ -10,6 +10,7 @@ import Foundation
 import NicoEntity
 import NicoAPI
 import RealmSwift
+import Realm
 import Himotoki
 import RxSwift
 import RxAPISchema
@@ -55,6 +56,10 @@ class SessionImpl: Object, Session, Decodable {
     
     required init() {
         super.init()
+    }
+    
+    override init(realm: RLMRealm, schema: RLMObjectSchema) {
+        super.init(realm: realm, schema: schema)
     }
 }
 

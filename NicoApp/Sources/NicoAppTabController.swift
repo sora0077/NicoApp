@@ -53,6 +53,12 @@ class NicoAppTabController: ButtonBarPagerTabStripViewController {
             make.bottom.equalTo(superview)
         }
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        updateBarButtons()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -64,5 +70,39 @@ class NicoAppTabController: ButtonBarPagerTabStripViewController {
         return domain.repository.ranking.categories().map {
             RankingListViewController(category: $0, period: .Hourly)
         }
+    }
+    
+    func updateBarButtons() {
+        
+        let account = UIBarButtonItem()
+        account.setFAIcon(.FAUser, iconSize: 20)
+        account.tintColor = .whiteColor()
+        account.target = self
+        account.action = #selector(NicoAppTabController.loginAction)
+        
+        let spacer = UIBarButtonItem(barButtonSystemItem: .FixedSpace, target: nil, action: nil)
+        spacer.width = 16
+        
+        let search = UIBarButtonItem()
+        search.setFAIcon(.FASearch, iconSize: 20)
+        search.tintColor = .whiteColor()
+        
+        if let s = try? domain.repository.session.session(), session = s {
+            print(session)
+            navigationItem.rightBarButtonItems = [search]
+        } else {
+            navigationItem.rightBarButtonItems = [account, spacer, search]
+        }
+    }
+}
+
+extension NicoAppTabController {
+    
+    @objc func loginAction() {
+        
+        let vc = LoginViewController()
+        presentViewController(vc, animated: true, completion: nil)
+        
+        
     }
 }
