@@ -55,6 +55,10 @@ class NicoAppTabController: ButtonBarPagerTabStripViewController {
             make.right.equalTo(superview)
             make.bottom.equalTo(superview)
         }
+        
+        let logo = UIBarButtonItem(image: UIImage(named: "logo-icon"), style: .Plain, target: nil, action: nil)
+        logo.tintColor = .whiteColor()
+        navigationItem.leftBarButtonItem = logo
     }
     
     override func viewWillAppear(animated: Bool) {

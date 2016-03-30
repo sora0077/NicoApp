@@ -40,6 +40,8 @@ class RankingVideoRow<T: UITableViewCell where T: RankingVideoRowRenderer>: Tabl
     
     let video: Video
     
+    private let disposeBag = DisposeBag()
+    
     init(video: Video) {
         self.id = video.id
         self.video = video
@@ -59,8 +61,6 @@ class RankingVideoRow<T: UITableViewCell where T: RankingVideoRowRenderer>: Tabl
     override func didSelect(indexPath: NSIndexPath) {
         super.didSelect(indexPath)
         
-        let video = domain.repository.video.cache(id)
-        print(video)
     }
 }
 
@@ -133,7 +133,14 @@ class RankingListViewController: UIViewController {
                 
             }
             .addDisposableTo(disposeBag)
-        
+     
+        tableView.rx_itemSelected
+            .asDriver()
+            .map {
+                (self.tableView[indexPath: $0] as! RankingVideoRow<RankingVideoTableViewCell>).video
+            }
+            .driveNext(videoPlay)
+            .addDisposableTo(disposeBag)
     }
 
     override func didReceiveMemoryWarning() {

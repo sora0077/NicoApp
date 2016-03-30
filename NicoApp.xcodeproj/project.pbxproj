@@ -10,6 +10,7 @@
 		2EDB4AAAC8FE6C0DC539726C /* Pods_NicoAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F2236714DC4DE21811621DB /* Pods_NicoAPI.framework */; };
 		5C15A8D588603D13A493A7F7 /* Pods_NicoRepository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 201BA8D65B440C3FA1AFAB62 /* Pods_NicoRepository.framework */; };
 		C46CA02A4E49C5C2B222E726 /* Pods_NicoDomainImpl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B69A3331D715391C2E34D4B5 /* Pods_NicoDomainImpl.framework */; };
+		D9092D651CAAD75100CBA8F1 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9092D641CAAD75100CBA8F1 /* PlayerViewController.swift */; };
 		D9193B401C76144500EAA0CB /* WatchVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9193B3F1C76144500EAA0CB /* WatchVideo.swift */; };
 		D9193B421C761AA100EAA0CB /* GetSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9193B411C761AA100EAA0CB /* GetSession.swift */; };
 		D9193B441C761AD100EAA0CB /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9193B431C761AD100EAA0CB /* Session.swift */; };
@@ -97,6 +98,7 @@
 		D9E940C11CA7C21100B36F5B /* VideoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E940C01CA7C21100B36F5B /* VideoRepository.swift */; };
 		D9E940C41CA7E46900B36F5B /* RankingVideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E940C21CA7E46900B36F5B /* RankingVideoTableViewCell.swift */; };
 		D9E940C51CA7E46900B36F5B /* RankingVideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9E940C31CA7E46900B36F5B /* RankingVideoTableViewCell.xib */; };
+		D9EB541B1CAC2790005CCF85 /* PlayerHostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EB541A1CAC2790005CCF85 /* PlayerHostController.swift */; };
 		E8CFABA8ACE6388157F3DE6A /* Pods_NicoEntity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7AC8A83BCC3ECB8274F5023 /* Pods_NicoEntity.framework */; };
 		EABD65DB6B75D9E211CF1403 /* Pods_NicoDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7863330B063160D7B0B44D /* Pods_NicoDomain.framework */; };
 		EF55A28FE1FC1A6AD0487618 /* Pods_NicoRepositoryImpl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 999A6DDFA1F04BADC0AF2C43 /* Pods_NicoRepositoryImpl.framework */; };
@@ -305,6 +307,7 @@
 		B69A3331D715391C2E34D4B5 /* Pods_NicoDomainImpl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NicoDomainImpl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA7863330B063160D7B0B44D /* Pods_NicoDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NicoDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2E9F4710176B54607F14ED5 /* Pods-NicoEntity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NicoEntity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NicoEntity/Pods-NicoEntity.debug.xcconfig"; sourceTree = "<group>"; };
+		D9092D641CAAD75100CBA8F1 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		D9193B3F1C76144500EAA0CB /* WatchVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchVideo.swift; sourceTree = "<group>"; };
 		D9193B411C761AA100EAA0CB /* GetSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetSession.swift; sourceTree = "<group>"; };
 		D9193B431C761AD100EAA0CB /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
@@ -395,6 +398,7 @@
 		D9E940C01CA7C21100B36F5B /* VideoRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoRepository.swift; sourceTree = "<group>"; };
 		D9E940C21CA7E46900B36F5B /* RankingVideoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingVideoTableViewCell.swift; sourceTree = "<group>"; };
 		D9E940C31CA7E46900B36F5B /* RankingVideoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RankingVideoTableViewCell.xib; sourceTree = "<group>"; };
+		D9EB541A1CAC2790005CCF85 /* PlayerHostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerHostController.swift; sourceTree = "<group>"; };
 		E0E3EC0F29F3964F02F1C2FF /* Pods_NicoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NicoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAC9877E6761A1550D97E29F /* Pods-NicoDomainImpl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NicoDomainImpl.release.xcconfig"; path = "Pods/Target Support Files/Pods-NicoDomainImpl/Pods-NicoDomainImpl.release.xcconfig"; sourceTree = "<group>"; };
 		F1E6E4FAACC68E16E3D07F15 /* Pods-NicoRepository.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NicoRepository.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NicoRepository/Pods-NicoRepository.debug.xcconfig"; sourceTree = "<group>"; };
@@ -588,6 +592,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D9092D631CAAD66E00CBA8F1 /* PlayerView */ = {
+			isa = PBXGroup;
+			children = (
+				D9092D641CAAD75100CBA8F1 /* PlayerViewController.swift */,
+				D9EB541A1CAC2790005CCF85 /* PlayerHostController.swift */,
+			);
+			path = PlayerView;
+			sourceTree = "<group>";
+		};
 		D9193B451C78B5A800EAA0CB /* Entity */ = {
 			isa = PBXGroup;
 			children = (
@@ -601,6 +614,7 @@
 		D9418E931CA42FCC00B5379D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D9092D631CAAD66E00CBA8F1 /* PlayerView */,
 				D9A24D8F1CA97C1400050D5C /* LoginView */,
 				D9418E951CA4311800B5379D /* RankingListView */,
 				D9418E941CA42FE800B5379D /* EntryPointView */,
@@ -1376,6 +1390,11 @@
 					D95633DA1C702C7A00550C70 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = B2TD54U4MA;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					D95633EE1C702C7A00550C70 = {
 						CreatedOnToolsVersion = 7.2;
@@ -1830,11 +1849,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9A24D911CA97C3500050D5C /* LoginViewController.swift in Sources */,
+				D9092D651CAAD75100CBA8F1 /* PlayerViewController.swift in Sources */,
 				D9A24D951CA9808A00050D5C /* LoginContentView.swift in Sources */,
 				D920BF061CA80B510001FECA /* NicoAppTabController.swift in Sources */,
 				D939EC531CA43F27004DC1C9 /* EntryPointController.swift in Sources */,
 				D95633DF1C702C7A00550C70 /* AppDelegate.swift in Sources */,
 				D9E940C41CA7E46900B36F5B /* RankingVideoTableViewCell.swift in Sources */,
+				D9EB541B1CAC2790005CCF85 /* PlayerHostController.swift in Sources */,
 				D939EC581CA6EA0A004DC1C9 /* RankingListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

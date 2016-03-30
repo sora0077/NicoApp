@@ -13,6 +13,8 @@ import RxSwift
 public protocol VideoRepository {
     
     func cache(id: String) -> Video?
+    
+    func watch(video: Video) -> Observable<Flv>
 }
 
 

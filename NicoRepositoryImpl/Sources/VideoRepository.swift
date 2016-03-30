@@ -27,4 +27,16 @@ public final class VideoRepositoryImpl: VideoRepository {
         let realm = try? Realm()
         return realm?.objectForPrimaryKey(VideoImpl.self, key: id)
     }
+    
+    public func watch(video: Video) -> Observable<Flv> {
+        
+        let id = video.id
+        return client
+            .start {
+                self.client.request(WatchVideo(id: id))
+            }
+            .flatMap {
+                self.client.request(GetFlv<FlvImpl>(id: id))
+            }
+    }
 }

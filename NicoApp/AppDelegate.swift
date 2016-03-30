@@ -1,11 +1,10 @@
- //
+//
 //  AppDelegate.swift
 //  NicoApp
 //
 //  Created by 林達也 on 2016/02/14.
 //  Copyright © 2016年 jp.sora0077. All rights reserved.
 //
-
 import UIKit
 import NicoDomain
 import NicoDomainImpl
@@ -13,7 +12,6 @@ import RealmSwift
 import RxSwift
 import RxAPISchema
 import WindowKit
- 
 
 let domain: Domain = DomainImpl(client: Client())
  
@@ -31,11 +29,44 @@ func async_after(sec: Double, _ block: () -> Void) {
     dispatch_after(when, dispatch_get_main_queue(), block)
 }
 
+import NicoEntity
+
+private func appDelegate() -> AppDelegate {
+    return UIApplication.sharedApplication().delegate as! AppDelegate
+}
+
+func videoPlay(video: Video) {
+    
+    guard let host = window(.player).rootViewController as? PlayerHostController else {
+        window(.player).rootViewController = appDelegate().playerHostController
+        return videoPlay(video)
+    }
+    
+    host.play(video)
+}
+
+func videoPause() {
+    
+}
+
+func videoStop() {
+    
+    guard let host = window(.player).rootViewController as? PlayerHostController else {
+        return
+    }
+    
+    host.stop()
+}
+
+import AVFoundation
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     private lazy var manager: Manager<WindowLayer> = Manager<WindowLayer>(keyWindow: self.window!)
+    
+    private let playerHostController = PlayerHostController()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -43,6 +74,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window?.rootViewController = EntryPointController()
         window?.makeKeyAndVisible()
+        
+        let session = AVAudioSession.sharedInstance()
+        try! session.setCategory(AVAudioSessionCategoryPlayback)
+        try! session.setActive(true)
         
         return true
     }
