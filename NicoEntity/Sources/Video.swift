@@ -32,6 +32,8 @@ public protocol Video {
     
     var provider_type: String { get }
     
+    var thread_id: String { get }
+    
     init(
         id: String,
         title: String,
@@ -48,7 +50,8 @@ public protocol Video {
         width: Int,
         height: Int,
         deleted: Int,
-        provider_type: String
+        provider_type: String,
+        thread_id: String
     )
 }
 
@@ -72,7 +75,8 @@ extension Video where Self: Decodable {
             width: e <| ["video", "width"] <- convertInt,
             height: e <| ["video", "height"] <- convertInt,
             deleted: e <| ["video", "deleted"] <- convertInt,
-            provider_type: e <| ["video", "provider_type"]
+            provider_type: e <| ["video", "provider_type"],
+            thread_id: e <| ["thread", "id"]
         )
     }
 }

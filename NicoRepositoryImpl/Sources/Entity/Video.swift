@@ -40,6 +40,7 @@ class VideoImpl: Object, Video, Decodable {
     
     dynamic var provider_type: String = ""
     
+    dynamic var thread_id: String = ""
     
     required init(
         id: String,
@@ -57,26 +58,29 @@ class VideoImpl: Object, Video, Decodable {
         width: Int,
         height: Int,
         deleted: Int,
-        provider_type: String
-        ) {
-            self.id = id
-            self.title = title
-            self.length_in_seconds = length_in_seconds
-            self.thumbnail_url = thumbnail_url
-            self.upload_time = upload_time
-            self.first_retrieve = first_retrieve
-            self.view_counter = view_counter
-            self.mylist_counter = mylist_counter
-            self.comment_counter = comment_counter
-            self.option_flag_community = option_flag_community
-            self.option_flag_nicowari = option_flag_nicowari
-            self.option_flag_middle_thumbnail = option_flag_middle_thumbnail
-            self.width = width
-            self.height = height
-            self.deleted = deleted
-            self.provider_type = provider_type
-            
-            super.init()
+        provider_type: String,
+        thread_id: String
+        )
+    {
+        self.id = id
+        self.title = title
+        self.length_in_seconds = length_in_seconds
+        self.thumbnail_url = thumbnail_url
+        self.upload_time = upload_time
+        self.first_retrieve = first_retrieve
+        self.view_counter = view_counter
+        self.mylist_counter = mylist_counter
+        self.comment_counter = comment_counter
+        self.option_flag_community = option_flag_community
+        self.option_flag_nicowari = option_flag_nicowari
+        self.option_flag_middle_thumbnail = option_flag_middle_thumbnail
+        self.width = width
+        self.height = height
+        self.deleted = deleted
+        self.provider_type = provider_type
+        self.thread_id = thread_id
+        
+        super.init()
     }
     
     required init() {

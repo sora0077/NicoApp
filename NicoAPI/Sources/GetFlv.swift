@@ -43,7 +43,9 @@ extension GetFlv: NicoAPIRequestToken, StringSerializer {
         }
         
         for kv in kvs {
-            dict[kv[0]] = kv[1]
+            if kv.count == 2 {
+                dict[kv[0]] = kv[1]
+            }
         }
         
         if "1" == dict["closed"] {

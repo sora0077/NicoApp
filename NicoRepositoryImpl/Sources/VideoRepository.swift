@@ -31,12 +31,13 @@ public final class VideoRepositoryImpl: VideoRepository {
     public func watch(video: Video) -> Observable<Flv> {
         
         let id = video.id
+        let thread_id = video.thread_id
         return client
             .start {
                 self.client.request(DebugRequest(WatchVideo(id: id)))
             }
-            .flatMap {
-                self.client.request(DebugRequest(GetFlv<FlvImpl>(id: id)))
+            .flatMap { video in
+                self.client.request(DebugRequest(GetFlv<FlvImpl>(id: thread_id)))
             }
     }
 }
