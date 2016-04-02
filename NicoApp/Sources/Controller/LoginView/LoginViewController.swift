@@ -9,6 +9,9 @@
 import UIKit
 import SnapKit
 import RxSwift
+import KeychainAccess
+
+import NicoEntity
 
 
 class LoginViewController: UIViewController {
@@ -37,16 +40,51 @@ class LoginViewController: UIViewController {
                 self.contentView.loginButton.enabled = false
             }
             .flatMap {
-                Observable.combineLatest(self.contentView.emailTextField.rx_text, self.contentView.passwordTextField.rx_text) { ($0, $1) }
+                Observable.combineLatest(
+                    self.contentView.emailTextField.rx_text,
+                    self.contentView.passwordTextField.rx_text
+                ) { ($0, $1) }
             }
-            .flatMap {
-                domain.repository.session.login(mailaddress: $0, password: $1)
+            .flatMap { (mailaddress, password) -> Observable<Session> in
+                let keychain = Keychain(service: "jp.sora0077.NicoApp")
+                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+                    do {
+                        let defaults = NSUserDefaults.standardUserDefaults()
+                        guard defaults.stringForKey("mailaddress") == nil else { return }
+                        try keychain
+                            .accessibility(.WhenPasscodeSetThisDeviceOnly, authenticationPolicy: .UserPresence)
+                            .set(password, key: mailaddress)
+                        defaults.setObject(mailaddress, forKey: "mailaddress")
+                        defaults.synchronize()
+                    } catch {
+                        print(error)
+                    }
+                }
+                return domain.repository.session.login(mailaddress: mailaddress, password: password)
             }
             .subscribeNext { _ in
                 self.contentView.loginButton.enabled = true
                 self.dismissViewControllerAnimated(true, completion: nil)
             }
             .addDisposableTo(disposeBag)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let keychain = Keychain(service: "jp.sora0077.NicoApp")
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if let key = defaults.stringForKey("mailaddress") {
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+                if let password = try? keychain.authenticationPrompt("").get(key) {
+                    dispatch_async(dispatch_get_main_queue()) {
+                        self.contentView.emailTextField.text = key
+                        self.contentView.passwordTextField.text = password
+                        self.contentView.loginButton.sendActionsForControlEvents(.TouchUpInside)
+                    }
+                }
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

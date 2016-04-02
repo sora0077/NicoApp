@@ -26,6 +26,7 @@ class LoginContentView: UIView {
             emailTextField.placeholder = "メールアドレスまたは電話番号"
             emailTextField.autocapitalizationType = .None
             emailTextField.autocorrectionType = .No
+            emailTextField.keyboardType = .EmailAddress
         }
     }
     @IBOutlet private weak var passwordContainerView: UIView! {

@@ -4,6 +4,7 @@ PODS:
   - Fuzi (0.3.0)
   - Himotoki (1.7.0)
   - JVFloatLabeledTextField (1.1.0)
+  - KeychainAccess (2.3.5)
   - QueryKit (0.12.1)
   - Realm (0.98.5):
     - Realm/Headers (= 0.98.5)
@@ -31,6 +32,7 @@ DEPENDENCIES:
   - Fuzi
   - Himotoki
   - JVFloatLabeledTextField
+  - KeychainAccess
   - QueryKit
   - RealmSwift
   - RelayoutKit (from `https://github.com/sora0077/RelayoutKit.git`)
@@ -64,6 +66,7 @@ SPEC CHECKSUMS:
   Fuzi: 4725b8743f0a92100108e013347bf32ca80d93a1
   Himotoki: a97b4a5861d6d25fc0746f0e19164eef03c19347
   JVFloatLabeledTextField: ea4a3d8387ddd43724c472bb2b8ab39b79af05d4
+  KeychainAccess: e283c1981a6c5655e1984cd411c6faf16fa165ae
   QueryKit: 6a8dbe9f33ffac00c424143695681a949b58518d
   Realm: db08379969e45cea2edd1c3c0a090fe9e22d2d2f
   RealmSwift: cb11ad1c35e15dc982f2dbf5afe2a3124193a358
