@@ -17,6 +17,9 @@ final class EntryPointController: UIViewController {
         
         view.backgroundColor = .whiteColor()
         
+        view.layer.cornerRadius = 2
+        view.layer.masksToBounds = true
+        
         let superview = view
         let vc = UINavigationController(rootViewController: NicoAppTabController())
         vc.navigationBar.barTintColor = UIColor(red:0.14, green:0.14, blue:0.14, alpha:1.00)

@@ -40,15 +40,13 @@ class PlayerViewController: UIViewController {
     
     deinit {
         queuePlayer.removeObserver(self, forKeyPath: "status")
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
     override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
         
-        switch (keyPath, queuePlayer.status) {
-        case ("status"?, .ReadyToPlay):
+        if case ("status"?, .ReadyToPlay) = (keyPath, queuePlayer.status) {
             queuePlayer.play()
-        default:
-            break
         }
     }
 
@@ -57,11 +55,13 @@ class PlayerViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         let superview = view
+        let scale: CGFloat = 1.5
         view.addSubview(playerController.view)
         playerController.view.snp_makeConstraints { make in
-            make.edges.equalTo(superview)
+            make.edges.equalTo(superview).multipliedBy(scale)
         }
-        
+        playerController.view.layer.anchorPoint = CGPoint(x: 0.5 * scale, y: 0.5 * scale)
+        playerController.view.transform = CGAffineTransformMakeScale(1/scale, 1/scale)
         addChildViewController(playerController)
         playerController.didMoveToParentViewController(self)
         
@@ -79,33 +79,52 @@ class PlayerViewController: UIViewController {
         fetch(video)
     }
     
-    func stop() {
-        self.queuePlayer.pause()
+    func stop(completion: () -> Void) {
+        let _stop = {
+            self.queuePlayer.removeAllItems()
+            self.queuePlayer.pause()
+            completion()
+        }
+        if let vc = self.presentedViewController {
+            UIView.animateWithDuration(0.2, animations: {
+                self.view.alpha = 0
+            })
+            vc.dismissViewControllerAnimated(true) {
+                _stop()
+            }
+        } else {
+            _stop()
+        }
     }
     
     private func fetch(video: Video) {
         
         domain.repository.video.watch(video)
-            .subscribeNext { [weak self] flv in
-                print(flv)
-                guard let `self` = self else { return }
-                let item = AVPlayerItem(URL: NSURL(string: flv.url)!)
-                
-                NSNotificationCenter.defaultCenter().addObserver(
-                    self,
-                    selector: #selector(PlayerViewController.didEndPlay),
-                    name: AVPlayerItemDidPlayToEndTimeNotification,
-                    object: item
-                )
-                
-                self.queuePlayer.insertItem(item, afterItem: nil)
-            }
+            .subscribe(
+                onNext: { [weak self] flv in
+                    print(flv)
+                    guard let `self` = self else { return }
+                    let item = AVPlayerItem(URL: NSURL(string: flv.url)!)
+                    
+                    NSNotificationCenter.defaultCenter().addObserver(
+                        self,
+                        selector: #selector(PlayerViewController.didEndPlay),
+                        name: AVPlayerItemDidPlayToEndTimeNotification,
+                        object: item
+                    )
+                    
+                    self.queuePlayer.insertItem(item, afterItem: nil)
+                },
+                onError: { error in
+                    print(error)
+                    videoStop()
+                }
+            )
             .addDisposableTo(disposeBag)
     }
     
-    @objc func didEndPlay(notification: NSNotification) {
-        if queuePlayer.currentItem === notification.object
-            && queuePlayer.items().count == 1 {
+    @objc func didEndPlay() {
+        if queuePlayer.items().count == 1 {
             videoStop()
         }
     }

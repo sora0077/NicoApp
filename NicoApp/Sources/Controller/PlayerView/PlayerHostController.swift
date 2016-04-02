@@ -15,7 +15,7 @@ import SnapKit
 
 class PlayerHostController: UIViewController {
 
-    weak var playerViewController: PlayerViewController?
+    private weak var playerViewController: PlayerViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +41,12 @@ class PlayerHostController: UIViewController {
                 make.right.equalTo(superview.snp_right)
                 make.bottom.equalTo(superview.snp_bottom)
             }
+            vc.view.layer.cornerRadius = 2
+            vc.view.layer.masksToBounds = true
+            view.layer.shadowRadius = 8
+            view.layer.shadowOpacity = 0.6
+            view.layer.shadowColor = UIColor(red:0.14, green:0.14, blue:0.14, alpha:1.00).CGColor
+//            vc.view.transform = CGAffineTransformMakeScale(0.6, 0.6)
             
             addChildViewController(vc)
             vc.didMoveToParentViewController(self)
@@ -55,10 +61,11 @@ class PlayerHostController: UIViewController {
         
         guard let vc = playerViewController else { return }
         
-        vc.stop()
-        vc.willMoveToParentViewController(nil)
-        vc.view.removeFromSuperview()
-        vc.removeFromParentViewController()
+        vc.stop {
+            vc.willMoveToParentViewController(nil)
+            vc.view.removeFromSuperview()
+            vc.removeFromParentViewController()
+        }
         
     }
     

@@ -33,10 +33,10 @@ public final class VideoRepositoryImpl: VideoRepository {
         let id = video.id
         return client
             .start {
-                self.client.request(WatchVideo(id: id))
+                self.client.request(DebugRequest(WatchVideo(id: id)))
             }
             .flatMap {
-                self.client.request(GetFlv<FlvImpl>(id: id))
+                self.client.request(DebugRequest(GetFlv<FlvImpl>(id: id)))
             }
     }
 }
