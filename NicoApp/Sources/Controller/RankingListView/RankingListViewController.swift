@@ -126,7 +126,7 @@ class RankingListViewController: UIViewController {
                     self.refreshControl.endRefreshing()
                 }
                 
-                self.tableView.flush()
+                self.tableView.removeAll()
                 self.tableView.extend(videos.map {
                     RankingVideoRow<RankingVideoTableViewCell>(video: $0)
                 }, atSetcion: 0)

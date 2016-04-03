@@ -11,7 +11,7 @@ PODS:
   - Realm/Headers (0.98.6)
   - RealmSwift (0.98.6):
     - Realm (= 0.98.6)
-  - RelayoutKit (0.1.1)
+  - RelayoutKit (0.1.2)
   - RxAPISchema (0.0.1):
     - Alamofire
     - RxSwift
@@ -54,7 +54,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   RelayoutKit:
-    :commit: 7ac59432f1140afba86f0b00e73f6734ef9a4e90
+    :commit: 72caa74ca78919379c7532d0bf00c5ede9f4064c
     :git: https://github.com/sora0077/RelayoutKit.git
   WindowKit:
     :commit: 1f513d9c36470110b8f8f1ca6d1b679d5d4d1a80
@@ -70,7 +70,7 @@ SPEC CHECKSUMS:
   QueryKit: 6a8dbe9f33ffac00c424143695681a949b58518d
   Realm: 44803f35418c5d89b27825a564247fcd190de37e
   RealmSwift: c7239c52c83f8c43525a5269ba7be1694da33afc
-  RelayoutKit: 3fac79cd49dabe54a074129962e41c170106d0de
+  RelayoutKit: 7d793ac50b09b85cfbf7e4aebbf4b3f6a3f8f0eb
   RxAPISchema: a8a109fcaec0c81718fd8429076a8af2248c6d10
   RxCocoa: a2baaf3462b989559a51dce59d78fbebb8fe0afa
   RxSwift: 829b2843e9eddc77a02cb3f5117f0d55f8f646f1

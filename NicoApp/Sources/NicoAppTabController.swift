@@ -96,7 +96,13 @@ class NicoAppTabController: ButtonBarPagerTabStripViewController {
             account.target = self
             account.action = #selector(NicoAppTabController.logoutAction)
             
-            navigationItem.setRightBarButtonItems([account, spacer, search], animated: true)
+            let history = UIBarButtonItem()
+            history.setFAIcon(.FATelevision, iconSize: 20)
+            history.tintColor = .whiteColor()
+            history.target = self
+            history.action = #selector(NicoAppTabController.showHistoryAction)
+            
+            navigationItem.setRightBarButtonItems([account, spacer, search, history], animated: true)
         } else {
             let account = UIBarButtonItem()
             account.setFAIcon(.FAUser, iconSize: 20)
@@ -110,6 +116,10 @@ class NicoAppTabController: ButtonBarPagerTabStripViewController {
 }
 
 extension NicoAppTabController {
+    
+    @objc func showHistoryAction() {
+        
+    }
     
     @objc func loginAction() {
         
