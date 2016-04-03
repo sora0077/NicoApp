@@ -45,6 +45,7 @@ class PlayerViewController: UIViewController {
         self.video = video
         super.init(nibName: nil, bundle: nil)
         
+        playerController.delegate = self
         playerController.player = queuePlayer
         queuePlayer.addObserver(self, forKeyPath: "status", options: [.New, .Old], context: nil)
     }
@@ -163,4 +164,25 @@ class PlayerViewController: UIViewController {
     }
     */
 
+}
+
+extension PlayerViewController: AVPlayerViewControllerDelegate {
+    
+    func playerViewControllerDidStartPictureInPicture(playerViewController: AVPlayerViewController) {
+        
+        UIView.animateWithDuration(0.3) {
+            self.view.alpha = 0
+        }
+    }
+    
+    func playerViewControllerWillStopPictureInPicture(playerViewController: AVPlayerViewController) {
+        
+        UIView.animateWithDuration(0.3) {
+            self.view.alpha = 1
+        }
+    }
+    
+    func playerViewControllerShouldAutomaticallyDismissAtPictureInPictureStart(playerViewController: AVPlayerViewController) -> Bool {
+        return true
+    }
 }
