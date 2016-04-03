@@ -14,6 +14,8 @@ public protocol VideoRepository {
     
     func cache(id: String) -> Video?
     
+    func get(id: String) -> Observable<Video?>
+    
     func watch(video: Video) -> Observable<Flv>
 }
 

@@ -126,6 +126,8 @@ extension NicoAppTabController {
         let nav = UINavigationController(rootViewController: vc)
         nav.navigationBar.barTintColor = UIColor(red:0.14, green:0.14, blue:0.14, alpha:1.00)
         nav.navigationBar.translucent = false
+        nav.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        nav.navigationBar.barStyle = .Black
         
         presentViewController(nav, animated: true, completion: nil)
     }
