@@ -81,8 +81,11 @@ class NicoAppTabController: ButtonBarPagerTabStripViewController {
     
     func updateBarButtons() {
         
-        let spacer = UIBarButtonItem(barButtonSystemItem: .FixedSpace, target: nil, action: nil)
-        spacer.width = 16
+        func spacer() -> UIBarButtonItem {
+            let spacer = UIBarButtonItem(barButtonSystemItem: .FixedSpace, target: nil, action: nil)
+            spacer.width = 16
+            return spacer
+        }
         
         let search = UIBarButtonItem()
         search.setFAIcon(.FASearch, iconSize: 20)
@@ -102,7 +105,7 @@ class NicoAppTabController: ButtonBarPagerTabStripViewController {
             history.target = self
             history.action = #selector(NicoAppTabController.showHistoryAction)
             
-            navigationItem.setRightBarButtonItems([account, spacer, search, history], animated: true)
+            navigationItem.setRightBarButtonItems([account, spacer(), search, spacer(), history], animated: true)
         } else {
             let account = UIBarButtonItem()
             account.setFAIcon(.FAUser, iconSize: 20)
@@ -110,7 +113,7 @@ class NicoAppTabController: ButtonBarPagerTabStripViewController {
             account.target = self
             account.action = #selector(NicoAppTabController.loginAction)
             
-            navigationItem.setRightBarButtonItems([account, spacer, search], animated: true)
+            navigationItem.setRightBarButtonItems([account, spacer(), search], animated: true)
         }
     }
 }
@@ -119,6 +122,12 @@ extension NicoAppTabController {
     
     @objc func showHistoryAction() {
         
+        let vc = HistoryViewController()
+        let nav = UINavigationController(rootViewController: vc)
+        nav.navigationBar.barTintColor = UIColor(red:0.14, green:0.14, blue:0.14, alpha:1.00)
+        nav.navigationBar.translucent = false
+        
+        presentViewController(nav, animated: true, completion: nil)
     }
     
     @objc func loginAction() {

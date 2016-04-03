@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import SnapKit
 import RelayoutKit
+import Font_Awesome_Swift
 
 
 class HistoryViewController: UIViewController {
@@ -20,6 +21,8 @@ class HistoryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "視聴履歴"
         
         let superview = view
         view.addSubview(tableView)
@@ -43,6 +46,28 @@ class HistoryViewController: UIViewController {
                 }, atSetcion: 0)
             }
         ).addDisposableTo(disposeBag)
+        
+        tableView.rx_itemSelected
+            .asDriver()
+            .map {
+                (self.tableView[indexPath: $0] as! RankingVideoRow<RankingVideoTableViewCell>).video
+            }
+            .driveNext(videoPlay)
+            .addDisposableTo(disposeBag)
+        
+        let close = UIBarButtonItem()
+        close.setFAIcon(.FAClose, iconSize: 20)
+        close.tintColor = .whiteColor()
+        close.target = self
+        close.action = #selector(HistoryViewController.closeAction)
+        navigationItem.leftBarButtonItem = close
     }
     
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
+    }
+    
+    @objc func closeAction() {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 }
