@@ -77,6 +77,10 @@
 		D9A24D911CA97C3500050D5C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A24D901CA97C3500050D5C /* LoginViewController.swift */; };
 		D9A24D951CA9808A00050D5C /* LoginContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A24D931CA9808A00050D5C /* LoginContentView.swift */; };
 		D9A24D961CA9808A00050D5C /* LoginContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9A24D941CA9808A00050D5C /* LoginContentView.xib */; };
+		D9AD1FA71CB0DFA600125CBC /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AD1FA61CB0DFA600125CBC /* History.swift */; };
+		D9AD1FA91CB0E07C00125CBC /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AD1FA81CB0E07C00125CBC /* History.swift */; };
+		D9AD1FAB1CB0E10F00125CBC /* HistoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AD1FAA1CB0E10F00125CBC /* HistoryRepository.swift */; };
+		D9AD1FAD1CB0E2E500125CBC /* HistoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AD1FAC1CB0E2E500125CBC /* HistoryRepository.swift */; };
 		D9B1F5171C73795600F62FB5 /* NicoRepository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95634561C702CB800550C70 /* NicoRepository.framework */; };
 		D9B1F51D1C7379AA00F62FB5 /* NicoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B1F51C1C7379AA00F62FB5 /* NicoRepository.swift */; };
 		D9B1F51F1C73805F00F62FB5 /* NicoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B1F51E1C73805F00F62FB5 /* NicoEntity.swift */; };
@@ -384,6 +388,10 @@
 		D9A24D901CA97C3500050D5C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D9A24D931CA9808A00050D5C /* LoginContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginContentView.swift; sourceTree = "<group>"; };
 		D9A24D941CA9808A00050D5C /* LoginContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginContentView.xib; sourceTree = "<group>"; };
+		D9AD1FA61CB0DFA600125CBC /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		D9AD1FA81CB0E07C00125CBC /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		D9AD1FAA1CB0E10F00125CBC /* HistoryRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryRepository.swift; sourceTree = "<group>"; };
+		D9AD1FAC1CB0E2E500125CBC /* HistoryRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryRepository.swift; sourceTree = "<group>"; };
 		D9B1F51C1C7379AA00F62FB5 /* NicoRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NicoRepository.swift; sourceTree = "<group>"; };
 		D9B1F51E1C73805F00F62FB5 /* NicoEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NicoEntity.swift; sourceTree = "<group>"; };
 		D9C02E201CA2DBF90023DE2D /* RefRanking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefRanking.swift; sourceTree = "<group>"; };
@@ -607,6 +615,7 @@
 				D9193B461C78B5B900EAA0CB /* Flv.swift */,
 				D9193B481C78B65C00EAA0CB /* Video.swift */,
 				D9193B4A1C78B68500EAA0CB /* Session.swift */,
+				D9AD1FA81CB0E07C00125CBC /* History.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -802,6 +811,7 @@
 				D95634981C702D9B00550C70 /* Flv.swift */,
 				D95634991C702D9B00550C70 /* Video.swift */,
 				D9193B431C761AD100EAA0CB /* Session.swift */,
+				D9AD1FA61CB0DFA600125CBC /* History.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -886,6 +896,7 @@
 				D9CF2FBF1CA189900079F83D /* RankingRepository.swift */,
 				D9E363E81CA41F9E00BB4719 /* SessionRepository.swift */,
 				D9E940C01CA7C21100B36F5B /* VideoRepository.swift */,
+				D9AD1FAC1CB0E2E500125CBC /* HistoryRepository.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -900,6 +911,7 @@
 				D98F06721C8B44600037D7A9 /* RankingRepository.swift */,
 				D98F06741C8C41B90037D7A9 /* SessionRepository.swift */,
 				D9CF2FBD1CA188A60079F83D /* NicoRepositoryImpl.swift */,
+				D9AD1FAA1CB0E10F00125CBC /* HistoryRepository.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -1884,6 +1896,7 @@
 				D9B1F51F1C73805F00F62FB5 /* NicoEntity.swift in Sources */,
 				D956349A1C702D9B00550C70 /* Flv.swift in Sources */,
 				D956349B1C702D9B00550C70 /* Video.swift in Sources */,
+				D9AD1FA71CB0DFA600125CBC /* History.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1925,6 +1938,7 @@
 			files = (
 				D9CF2FC01CA189900079F83D /* RankingRepository.swift in Sources */,
 				D9E363E91CA41F9E00BB4719 /* SessionRepository.swift in Sources */,
+				D9AD1FAD1CB0E2E500125CBC /* HistoryRepository.swift in Sources */,
 				D9B1F51D1C7379AA00F62FB5 /* NicoRepository.swift in Sources */,
 				D9E940C11CA7C21100B36F5B /* VideoRepository.swift in Sources */,
 			);
@@ -1979,10 +1993,12 @@
 				D9193B471C78B5B900EAA0CB /* Flv.swift in Sources */,
 				D9C02E211CA2DBF90023DE2D /* RefRanking.swift in Sources */,
 				D9193B491C78B65C00EAA0CB /* Video.swift in Sources */,
+				D9AD1FA91CB0E07C00125CBC /* History.swift in Sources */,
 				D98F06731C8B44600037D7A9 /* RankingRepository.swift in Sources */,
 				D9CF2FBE1CA188A60079F83D /* NicoRepositoryImpl.swift in Sources */,
 				D9C02E241CA2EDD60023DE2D /* RxSwift.swift in Sources */,
 				D98F06751C8C41B90037D7A9 /* SessionRepository.swift in Sources */,
+				D9AD1FAB1CB0E10F00125CBC /* HistoryRepository.swift in Sources */,
 				D94BA5121C709A72007A66E2 /* VideoRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

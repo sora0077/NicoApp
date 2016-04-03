@@ -16,6 +16,21 @@ import SnapKit
 import NicoEntity
 
 
+private var AVPlayerItem_nicovideoId: Int8 = 0
+private extension AVPlayerItem {
+
+    var nicovideoId: String? {
+        set {
+            objc_setAssociatedObject(self, &AVPlayerItem_nicovideoId, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+        get {
+            return objc_getAssociatedObject(self, &AVPlayerItem_nicovideoId) as? String
+        }
+    }
+    
+}
+
+
 class PlayerViewController: UIViewController {
     
     private let playerController = AVPlayerViewController()
@@ -99,12 +114,15 @@ class PlayerViewController: UIViewController {
     
     private func fetch(video: Video) {
         
+        let id = video.id
+        
         domain.repository.video.watch(video)
             .subscribe(
                 onNext: { [weak self] flv in
                     print(flv)
                     guard let `self` = self else { return }
                     let item = AVPlayerItem(URL: NSURL(string: flv.url)!)
+                    item.nicovideoId = id
                     
                     NSNotificationCenter.defaultCenter().addObserver(
                         self,
@@ -123,7 +141,13 @@ class PlayerViewController: UIViewController {
             .addDisposableTo(disposeBag)
     }
     
-    @objc func didEndPlay() {
+    @objc func didEndPlay(notification: NSNotification) {
+        
+        if let item = notification.object as? AVPlayerItem, id = item.nicovideoId {
+            if let video = domain.repository.video.cache(id) {
+                _ = try? domain.repository.history.add(video)
+            }
+        }
         if queuePlayer.items().count == 1 {
             videoStop()
         }

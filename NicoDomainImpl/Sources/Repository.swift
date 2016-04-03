@@ -25,6 +25,7 @@ public final class RepositoryImpl: Repository {
 
     public private(set) lazy var ranking: RankingRepository = RankingRepositoryImpl(client: self.client)
 
+    public private(set) lazy var history: HistoryRepository = HistoryRepositoryImpl(client: self.client)
 
     public init(client: Client) {
         

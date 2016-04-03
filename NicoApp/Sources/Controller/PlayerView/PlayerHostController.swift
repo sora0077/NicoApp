@@ -50,6 +50,11 @@ class PlayerHostController: UIViewController {
             
             addChildViewController(vc)
             vc.didMoveToParentViewController(self)
+            
+            let gesture = UILongPressGestureRecognizer(target: self, action: #selector(PlayerHostController.stopVideoAction))
+            gesture.minimumPressDuration = 1
+            vc.view.addGestureRecognizer(gesture)
+            
             playerViewController = vc
             return
         }
@@ -71,5 +76,15 @@ class PlayerHostController: UIViewController {
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
+    }
+}
+
+private extension PlayerHostController {
+    
+    @objc func stopVideoAction(gesture: UILongPressGestureRecognizer) {
+        
+        if gesture.state == .Began {
+            videoStop()
+        }
     }
 }

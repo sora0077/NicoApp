@@ -17,6 +17,8 @@ public protocol Repository {
     var video: VideoRepository { get }
     
     var ranking: RankingRepository { get }
+    
+    var history: HistoryRepository { get }
 }
 
 public protocol Domain {

@@ -68,6 +68,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private let playerHostController = PlayerHostController()
 
+    private let disposeBag = DisposeBag()
+    
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
@@ -78,6 +81,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let session = AVAudioSession.sharedInstance()
         try! session.setCategory(AVAudioSessionCategoryPlayback)
         try! session.setActive(true)
+        
+        domain.repository.history.list().subscribe(
+            onNext: { histories in
+                if let history = histories.first {
+                    print(history.listenAt, history.video)
+                }
+            }
+        ).addDisposableTo(disposeBag)
         
         return true
     }
