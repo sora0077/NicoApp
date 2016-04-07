@@ -45,6 +45,15 @@ func videoPlay(video: Video) {
     host.play(video)
 }
 
+func videoResume() {
+    
+    guard let host = window(.player).rootViewController as? PlayerHostController else {
+        return
+    }
+    
+    host.resume()
+}
+
 func videoPause() {
     
 }
@@ -91,6 +100,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ).addDisposableTo(disposeBag)
         
         return true
+    }
+    
+    func applicationWillEnterForeground(application: UIApplication) {
+        videoResume()
     }
     
     private let regex = try! NSRegularExpression(pattern: "(sm|nm|so)?\\d+", options: [])

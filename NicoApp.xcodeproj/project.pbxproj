@@ -73,6 +73,7 @@
 		D956350D1C706AD000550C70 /* NicoAPIRequestToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = D956350C1C706AD000550C70 /* NicoAPIRequestToken.swift */; };
 		D956350F1C706BB500550C70 /* NicoAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D956350E1C706BB500550C70 /* NicoAPIError.swift */; };
 		D95F415E1CB155560094E6A7 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95F415D1CB155560094E6A7 /* HistoryViewController.swift */; };
+		D95F41621CB4199B0094E6A7 /* RankingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95F41611CB4199B0094E6A7 /* RankingListViewModel.swift */; };
 		D974D1341C8AE89C0090ADBB /* PaginationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D974D1331C8AE89C0090ADBB /* PaginationResponse.swift */; };
 		D98F06731C8B44600037D7A9 /* RankingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98F06721C8B44600037D7A9 /* RankingRepository.swift */; };
 		D98F06751C8C41B90037D7A9 /* SessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98F06741C8C41B90037D7A9 /* SessionRepository.swift */; };
@@ -382,6 +383,7 @@
 		D956350C1C706AD000550C70 /* NicoAPIRequestToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NicoAPIRequestToken.swift; sourceTree = "<group>"; };
 		D956350E1C706BB500550C70 /* NicoAPIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NicoAPIError.swift; sourceTree = "<group>"; };
 		D95F415D1CB155560094E6A7 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		D95F41611CB4199B0094E6A7 /* RankingListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingListViewModel.swift; sourceTree = "<group>"; };
 		D974D1331C8AE89C0090ADBB /* PaginationResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaginationResponse.swift; sourceTree = "<group>"; };
 		D98F06721C8B44600037D7A9 /* RankingRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingRepository.swift; sourceTree = "<group>"; };
 		D98F06741C8C41B90037D7A9 /* SessionRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionRepository.swift; sourceTree = "<group>"; };
@@ -920,6 +922,7 @@
 		D95635071C702F1900550C70 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				D95F415F1CB2D0910094E6A7 /* ViewModel */,
 				D9CF2FC31CA18F7C0079F83D /* NicoDomain.swift */,
 			);
 			path = Sources;
@@ -947,6 +950,22 @@
 				D95F415D1CB155560094E6A7 /* HistoryViewController.swift */,
 			);
 			path = HistoryView;
+			sourceTree = "<group>";
+		};
+		D95F415F1CB2D0910094E6A7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D95F41601CB419800094E6A7 /* RankingViewModel */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D95F41601CB419800094E6A7 /* RankingViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D95F41611CB4199B0094E6A7 /* RankingListViewModel.swift */,
+			);
+			path = RankingViewModel;
 			sourceTree = "<group>";
 		};
 		D9A24D8F1CA97C1400050D5C /* LoginView */ = {
@@ -1967,6 +1986,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9CF2FC41CA18F7C0079F83D /* NicoDomain.swift in Sources */,
+				D95F41621CB4199B0094E6A7 /* RankingListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

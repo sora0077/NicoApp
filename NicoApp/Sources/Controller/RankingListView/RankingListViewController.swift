@@ -110,7 +110,7 @@ class RankingListViewController: UIViewController {
         let period = self.period
         refreshControl.rx_controlEvent(.ValueChanged)
             .asDriver()
-            .startWith()
+            .startWith({ [weak self] in self?.refreshControl.beginRefreshing() }())
             .flatMap {
                 domain.repository.ranking
                     .list(category, period: period, target: .Total)
@@ -126,7 +126,7 @@ class RankingListViewController: UIViewController {
                     self.refreshControl.endRefreshing()
                 }
                 
-                self.tableView.removeAll()
+                self.tableView.removeAll(animation: .None)
                 self.tableView.extend(videos.map {
                     RankingVideoRow<RankingVideoTableViewCell>(video: $0)
                 }, atSetcion: 0)

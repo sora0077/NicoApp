@@ -95,6 +95,13 @@ class PlayerViewController: UIViewController {
         fetch(video)
     }
     
+    func resume() {
+        
+        if !queuePlayer.items().isEmpty {
+            queuePlayer.play()
+        }
+    }
+    
     func stop(completion: () -> Void) {
         let _stop = {
             self.queuePlayer.removeAllItems()

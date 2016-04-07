@@ -62,6 +62,13 @@ class PlayerHostController: UIViewController {
         vc.append(video)
     }
     
+    func resume() {
+        
+        guard let vc = playerViewController else { return }
+        
+        vc.resume()
+    }
+    
     func stop() {
         
         guard let vc = playerViewController else { return }

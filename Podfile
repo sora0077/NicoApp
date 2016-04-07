@@ -78,6 +78,8 @@ end
 target 'NicoDomain' do
 
   pod 'Fuzi'
+  pod 'RxSwift'
+  pod 'RxCocoa'
 end
 
 target 'NicoDomainTests' do
@@ -90,6 +92,8 @@ target 'NicoDomainImpl' do
   pod 'RealmSwift'
   pod 'QueryKit'
   pod 'Fuzi'
+  pod 'RxSwift'
+  pod 'RxCocoa'
 end
 
 target 'NicoDomainImplTests' do

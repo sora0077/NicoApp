@@ -40,7 +40,7 @@ class HistoryViewController: UIViewController {
             onNext: { [weak self] histories in
                 guard let `self` = self else { return }
                 
-                self.tableView.removeAll()
+                self.tableView.removeAll(animation: .None)
                 self.tableView.extend(histories.map {
                     RankingVideoRow<RankingVideoTableViewCell>(video: $0.video)
                 }, atSetcion: 0)
