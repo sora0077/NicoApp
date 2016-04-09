@@ -34,7 +34,7 @@ public final class VideoRepositoryImpl: VideoRepository {
             return Observable.create { [weak self] observer in
                 observer.onNext(self?.cache(id))
                 return NopDisposable.instance
-            }
+            }.subscribeOn(mainScheduler)
         }
         
         return cache() ?? self.client
@@ -64,7 +64,7 @@ public final class VideoRepositoryImpl: VideoRepository {
         let thread_id = video.thread_id
         return client
             .start {
-                self.client.request(DebugRequest(WatchVideo(id: id)))
+                self.client.request(WatchVideo(id: id))
             }
             .flatMap { video in
                 self.client.request(DebugRequest(GetFlv<FlvImpl>(id: thread_id)))

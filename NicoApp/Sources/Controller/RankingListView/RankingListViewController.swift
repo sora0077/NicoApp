@@ -32,6 +32,8 @@ protocol RankingVideoRowRenderer: TableRowRenderer {
     
     weak var thumbnailImageView: UIImageView! { get }
     weak var titleLabel: UILabel! { get }
+    
+    weak var lengthLabel: UILabel! { get }
 }
 
 class RankingVideoRow<T: UITableViewCell where T: RankingVideoRowRenderer>: TableRow<T> {
@@ -51,6 +53,10 @@ class RankingVideoRow<T: UITableViewCell where T: RankingVideoRowRenderer>: Tabl
     override func componentUpdate() {
         
         renderer?.titleLabel.text = video.title
+        let minutes = String(format: "%d", video.length_in_seconds / 60)
+        let seconds = String(format: "%02d", video.length_in_seconds % 60)
+        renderer?.lengthLabel.text = "\(minutes):\(seconds)"
+        print(minutes, seconds)
         if let url = NSURL(string: video.thumbnail_url) {
             renderer?.thumbnailImageView.sd_setImageWithURL(url)
         } else {

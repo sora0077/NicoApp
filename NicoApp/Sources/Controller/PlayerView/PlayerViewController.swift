@@ -30,24 +30,31 @@ private extension AVPlayerItem {
     
 }
 
+private struct QueueItem {
+    
+    var nicovideoId: String
+    
+}
 
 class PlayerViewController: UIViewController {
     
     private let playerController = AVPlayerViewController()
     
-    private let video: Video
-    
     private let disposeBag = DisposeBag()
     
     private var queuePlayer = AVQueuePlayer(items: [])
     
+    private var queue: ArraySlice<QueueItem> = []
+    
     init(video: Video) {
-        self.video = video
         super.init(nibName: nil, bundle: nil)
+        
+        queue.append(QueueItem(nicovideoId: video.id))
         
         playerController.delegate = self
         playerController.player = queuePlayer
         queuePlayer.addObserver(self, forKeyPath: "status", options: [.New, .Old], context: nil)
+        queuePlayer.addObserver(self, forKeyPath: "currentItem", options: [.New, .Old], context: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -55,14 +62,31 @@ class PlayerViewController: UIViewController {
     }
     
     deinit {
-        queuePlayer.removeObserver(self, forKeyPath: "status")
+        [
+            "status",
+            "currentItem"
+        ].forEach {
+            queuePlayer.removeObserver(self, forKeyPath: $0)
+        }
+        
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
     override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
         
-        if case ("status"?, .ReadyToPlay) = (keyPath, queuePlayer.status) {
-            queuePlayer.play()
+        guard let keyPath = keyPath else { return }
+        
+        switch keyPath {
+        case "status":
+            if queuePlayer.status == .ReadyToPlay {
+                queuePlayer.play()
+            }
+        case "currentItem":
+            print(queuePlayer.items().count)
+            print(queuePlayer.currentItem)
+            updateQueue()
+        default:
+            break
         }
     }
 
@@ -81,8 +105,7 @@ class PlayerViewController: UIViewController {
         addChildViewController(playerController)
         playerController.didMoveToParentViewController(self)
         
-        
-        fetch(video)
+        updateQueue()
     }
 
     override func didReceiveMemoryWarning() {
@@ -92,7 +115,8 @@ class PlayerViewController: UIViewController {
     
     func append(video: Video) {
         
-        fetch(video)
+        queue.append(QueueItem(nicovideoId: video.id))
+        updateQueue()
     }
     
     func resume() {
@@ -120,14 +144,25 @@ class PlayerViewController: UIViewController {
         }
     }
     
-    private func fetch(video: Video) {
+    private func updateQueue() {
         
-        let id = video.id
+        if queuePlayer.items().count < 3 && !queue.isEmpty {
+            let item = queue[queue.startIndex]
+            queue = queue.dropFirst()
+            fetch(item)
+        }
+    }
+    
+    private func fetch(item: QueueItem) {
+        
+        let id = item.nicovideoId
+        guard let video = domain.repository.video.cache(id) else {
+            return
+        }
         
         domain.repository.video.watch(video)
             .subscribe(
                 onNext: { [weak self] flv in
-                    print(flv)
                     guard let `self` = self else { return }
                     let item = AVPlayerItem(URL: NSURL(string: flv.url)!)
                     item.nicovideoId = id

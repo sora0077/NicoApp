@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -40,6 +40,26 @@
                             </mask>
                         </variation>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CSz-aT-3Xg">
+                        <rect key="frame" x="92" y="80" width="32" height="14"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t38-tj-3Dk">
+                                <rect key="frame" x="4" y="2" width="24" height="10"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.6996938345" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="t38-tj-3Dk" firstAttribute="leading" secondItem="CSz-aT-3Xg" secondAttribute="leading" constant="4" id="9o6-2v-I0w"/>
+                            <constraint firstItem="t38-tj-3Dk" firstAttribute="centerX" secondItem="CSz-aT-3Xg" secondAttribute="centerX" id="B9Y-VX-MYp"/>
+                            <constraint firstItem="t38-tj-3Dk" firstAttribute="top" secondItem="CSz-aT-3Xg" secondAttribute="top" constant="2" id="OLl-ip-0Xc"/>
+                            <constraint firstItem="t38-tj-3Dk" firstAttribute="centerY" secondItem="CSz-aT-3Xg" secondAttribute="centerY" id="P8Z-Np-vqe"/>
+                            <constraint firstAttribute="bottom" secondItem="t38-tj-3Dk" secondAttribute="bottom" constant="2" id="hRd-sa-jeP"/>
+                            <constraint firstAttribute="trailing" secondItem="t38-tj-3Dk" secondAttribute="trailing" constant="4" id="lmX-XC-IQe"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="SDB-Bo-RF5" firstAttribute="leading" secondItem="h5O-pg-1KO" secondAttribute="trailing" constant="8" id="20v-M7-1BW"/>
@@ -53,6 +73,8 @@
                     <constraint firstItem="3BS-oe-Iwh" firstAttribute="leading" secondItem="SDB-Bo-RF5" secondAttribute="leading" id="lsS-3C-Mzg"/>
                     <constraint firstAttribute="trailing" secondItem="3BS-oe-Iwh" secondAttribute="trailing" constant="8" id="qzg-hN-stI"/>
                     <constraint firstItem="3BS-oe-Iwh" firstAttribute="top" secondItem="h5O-pg-1KO" secondAttribute="top" id="rJ2-3U-raJ"/>
+                    <constraint firstItem="CSz-aT-3Xg" firstAttribute="trailing" secondItem="h5O-pg-1KO" secondAttribute="trailing" constant="-4" id="tH6-WC-Q60"/>
+                    <constraint firstItem="CSz-aT-3Xg" firstAttribute="bottom" secondItem="h5O-pg-1KO" secondAttribute="bottom" constant="-4" id="xFX-vz-sqR"/>
                     <constraint firstItem="h5O-pg-1KO" firstAttribute="top" secondItem="aVA-VJ-m33" secondAttribute="top" constant="8" id="yxS-er-lJg"/>
                 </constraints>
                 <variation key="default">
@@ -65,6 +87,8 @@
                 </variation>
             </tableViewCellContentView>
             <connections>
+                <outlet property="lengthBackgroundView" destination="CSz-aT-3Xg" id="xd9-gH-3WL"/>
+                <outlet property="lengthLabel" destination="t38-tj-3Dk" id="4xk-9y-xIz"/>
                 <outlet property="thumbnailImageView" destination="h5O-pg-1KO" id="RsM-bl-RzJ"/>
                 <outlet property="titleLabel" destination="3BS-oe-Iwh" id="UTF-g5-qjL"/>
             </connections>

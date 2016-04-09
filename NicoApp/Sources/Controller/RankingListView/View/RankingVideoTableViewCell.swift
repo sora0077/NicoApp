@@ -17,6 +17,15 @@ class RankingVideoTableViewCell: UITableViewCell {
     }
     
     @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBOutlet weak var lengthLabel: UILabel!
+    
+    @IBOutlet private weak var lengthBackgroundView: UIView! {
+        didSet {
+            lengthBackgroundColor = lengthBackgroundView.backgroundColor
+        }
+    }
+    private var lengthBackgroundColor: UIColor!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,10 +36,16 @@ class RankingVideoTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+        lengthBackgroundView.backgroundColor = lengthBackgroundColor
+    }
+    
+    override func setHighlighted(highlighted: Bool, animated: Bool) {
+        super.setHighlighted(highlighted, animated: animated)
+        
+        lengthBackgroundView.backgroundColor = lengthBackgroundColor
     }
     
 }
 
 extension RankingVideoTableViewCell: RankingVideoRowRenderer {
-    
 }
