@@ -28,7 +28,7 @@ public protocol Video {
     var width: Int { get }
     var height: Int { get }
     
-    var deleted: Int { get }
+    var deleted: Bool { get }
     
     var provider_type: String { get }
     
@@ -49,7 +49,7 @@ public protocol Video {
         option_flag_middle_thumbnail: Int,
         width: Int,
         height: Int,
-        deleted: Int,
+        deleted: Bool,
         provider_type: String,
         thread_id: String
     )
@@ -74,7 +74,7 @@ extension Video where Self: Decodable {
             option_flag_middle_thumbnail: e <| ["video", "option_flag_middle_thumbnail"] <- convertInt,
             width: e <| ["video", "width"] <- convertInt,
             height: e <| ["video", "height"] <- convertInt,
-            deleted: e <| ["video", "deleted"] <- convertInt,
+            deleted: e <| ["video", "deleted"] <- convertBool,
             provider_type: e <| ["video", "provider_type"],
             thread_id: e <| ["thread", "id"]
         )

@@ -67,7 +67,7 @@ public final class VideoRepositoryImpl: VideoRepository {
                 self.client.request(WatchVideo(id: id))
             }
             .flatMap { video in
-                self.client.request(DebugRequest(GetFlv<FlvImpl>(id: thread_id)))
+                self.client.request(GetFlv<FlvImpl>(id: thread_id))
             }
     }
 }

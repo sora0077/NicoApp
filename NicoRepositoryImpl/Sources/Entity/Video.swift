@@ -36,7 +36,7 @@ class VideoImpl: Object, Video, Decodable {
     dynamic var width: Int = 0
     dynamic var height: Int = 0
     
-    dynamic var deleted: Int = 0
+    dynamic var deleted: Bool = false
     
     dynamic var provider_type: String = ""
     
@@ -57,7 +57,7 @@ class VideoImpl: Object, Video, Decodable {
         option_flag_middle_thumbnail: Int,
         width: Int,
         height: Int,
-        deleted: Int,
+        deleted: Bool,
         provider_type: String,
         thread_id: String
         )

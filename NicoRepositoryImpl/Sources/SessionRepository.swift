@@ -15,6 +15,15 @@ import RxSwift
 import QueryKit
 import RealmSwift
 
+
+private extension Object {
+    
+    func print() -> Self {
+        Swift.print(self)
+        return self
+    }
+}
+
 public final class SessionRepositoryImpl: SessionRepository {
     
     let client: Client
@@ -28,7 +37,7 @@ public final class SessionRepositoryImpl: SessionRepository {
         let realm = try Realm()
         return realm.objects(SessionImpl).filter(
             SessionImpl.user_session_expired > NSDate()
-        ).first
+        ).first?.print()
     }
     
     public func login(mailaddress mailaddress: String, password: String) -> Observable<Session> {

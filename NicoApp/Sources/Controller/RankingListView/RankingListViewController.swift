@@ -56,8 +56,10 @@ class RankingVideoRow<T: UITableViewCell where T: RankingVideoRowRenderer>: Tabl
         let minutes = String(format: "%d", video.length_in_seconds / 60)
         let seconds = String(format: "%02d", video.length_in_seconds % 60)
         renderer?.lengthLabel.text = "\(minutes):\(seconds)"
-        print(minutes, seconds)
-        if let url = NSURL(string: video.thumbnail_url) {
+        
+        if video.deleted {
+            renderer?.thumbnailImageView.image = UIImage(named: "deleted-image")
+        } else if let url = NSURL(string: video.thumbnail_url) {
             renderer?.thumbnailImageView.sd_setImageWithURL(url)
         } else {
             renderer?.thumbnailImageView.image = nil
@@ -145,7 +147,39 @@ class RankingListViewController: UIViewController {
             .map {
                 (self.tableView[indexPath: $0] as! RankingVideoRow<RankingVideoTableViewCell>).video
             }
-            .driveNext(videoPlay)
+            .driveNext { [weak self] video in
+                
+                if let s = try? domain.repository.session.session(), _ = s {
+                    videoPlay(video)
+                } else {
+                    let vc = LoginViewController()
+                    self?.presentViewController(vc, animated: true, completion: nil)
+                }
+            }
+            .addDisposableTo(disposeBag)
+        
+        let gesture = UILongPressGestureRecognizer()
+        tableView.addGestureRecognizer(gesture)
+        gesture.rx_event
+            .asDriver()
+            .filter { gesture in
+                gesture.state == .Began
+            }
+            .map { [weak self] gesture -> NSIndexPath? in
+                guard let `self` = self else { return nil }
+                
+                let point = gesture.locationInView(gesture.view)
+                return self.tableView.indexPathForRowAtPoint(point)
+            }
+            .driveNext { [weak self] indexPath in
+                guard let `self` = self else { return }
+                guard let indexPath = indexPath else { return }
+                
+                let video = (self.tableView[indexPath: indexPath] as! RankingVideoRow<RankingVideoTableViewCell>).video
+                let url = NSURL(string: "http://www.nicovideo.jp/watch/\(video.id)")
+                let vc = WebViewController(url: url!)
+                self.presentViewController(vc, animated: true, completion: nil)
+            }
             .addDisposableTo(disposeBag)
     }
 

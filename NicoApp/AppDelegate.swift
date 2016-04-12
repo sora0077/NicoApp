@@ -91,13 +91,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         try! session.setCategory(AVAudioSessionCategoryPlayback)
         try! session.setActive(true)
         
-        domain.repository.history.list().subscribe(
-            onNext: { histories in
-                if let history = histories.first {
-                    print(history.listenAt, history.video)
-                }
-            }
-        ).addDisposableTo(disposeBag)
+//        print(NSHTTPCookieStorage.sharedHTTPCookieStorage().cookies)
         
         return true
     }
