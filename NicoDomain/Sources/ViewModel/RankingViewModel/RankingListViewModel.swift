@@ -11,13 +11,28 @@ import RxSwift
 import RxCocoa
 
 import NicoEntity
+import NicoAPI
 
+public typealias GetRanking = NicoAPI.GetRanking
 
-public protocol RankingListViewModel {
-
-//    var items: Observable<[Video]> { get }
+public final class RankingListViewModel: RequestViewModel<Video> {
     
-    var refreshEvent: ControlEvent<Void> { get }
+    private let category: GetRanking.Category
+    private let period: GetRanking.Period
+    private let target: GetRanking.Target
+
+    public init(category: GetRanking.Category, period: GetRanking.Period, target: GetRanking.Target) {
+        self.category = category
+        self.period = period
+        self.target = target
+        super.init()
+    }
+
+    override func stream() -> Observable<[Video]> {
+        return domain().repository.ranking.list(category, period: period, target: target)
+    }
     
-    var itemSelected: ControlEvent<NSIndexPath> { get }
+    public var itemSelected: Observable<Video> {
+        fatalError()
+    }
 }

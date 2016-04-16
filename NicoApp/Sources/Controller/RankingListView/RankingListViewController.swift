@@ -14,6 +14,7 @@ import SDWebImage
 import SnapKit
 import NicoEntity
 import TLYShyNavBar
+import NicoDomain
 
 import NicoAPI
 
@@ -86,9 +87,13 @@ class RankingListViewController: UIViewController {
     private let refreshControl = UIRefreshControl()
     private let tableView = UITableView()
     
+    private let viewmodel: RankingListViewModel
+    
     init(category: GetRanking.Category, period: GetRanking.Period) {
         self.category = category
         self.period = period
+        
+        self.viewmodel = RankingListViewModel(category: category, period: period, target: .Total)
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -114,33 +119,26 @@ class RankingListViewController: UIViewController {
         tableView.insertSubview(refreshControl, atIndex: 0)
         
         
-        let category = self.category
-        let period = self.period
-        refreshControl.rx_controlEvent(.ValueChanged)
+        viewmodel.indicatorViewHidden
             .asDriver()
-            .startWith({ [weak self] in self?.refreshControl.beginRefreshing() }())
-            .flatMap {
-                domain.repository.ranking
-                    .list(category, period: period, target: .Total)
-                    .doOnError { error in
-                        print(error)
-                    }
-                    .asDriver(onErrorJustReturn: [])
-            }
+            .flatMap(delayIfViewHidden)
+            .map { !$0 }
+            .drive(refreshControl.rx_refreshing)
+            .addDisposableTo(disposeBag)
+        
+        viewmodel.items
+            .asDriver(onErrorJustReturn: [])
             .driveNext { [weak self] videos in
                 guard let `self` = self else { return }
-                
-                async_after(0.3) {
-                    self.refreshControl.endRefreshing()
-                }
                 
                 self.tableView.removeAll(animation: .None)
                 self.tableView.extend(videos.map {
                     RankingVideoRow<RankingVideoTableViewCell>(video: $0)
-                }, atSetcion: 0)
+                    }, atSetcion: 0)
                 
             }
             .addDisposableTo(disposeBag)
+        
      
         tableView.rx_itemSelected
             .asDriver()
@@ -157,6 +155,15 @@ class RankingListViewController: UIViewController {
                 }
             }
             .addDisposableTo(disposeBag)
+        
+        refreshControl
+            .rx_controlEvent(.ValueChanged)
+            .asDriver()
+            .startWith({ [weak self] in self?.refreshControl.beginRefreshing() }())
+            .map { true }
+            .drive(viewmodel.request)
+            .addDisposableTo(disposeBag)
+        
         
         let gesture = UILongPressGestureRecognizer()
         tableView.addGestureRecognizer(gesture)

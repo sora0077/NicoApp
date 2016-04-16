@@ -14,6 +14,7 @@ import RxAPISchema
 import WindowKit
 
 let domain: Domain = DomainImpl(client: Client())
+
  
 enum WindowLayer: Int, WindowLevel {
     case player = 1
@@ -91,6 +92,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         try! session.setCategory(AVAudioSessionCategoryPlayback)
         try! session.setActive(true)
         
+        setup(domain)
 //        print(NSHTTPCookieStorage.sharedHTTPCookieStorage().cookies)
         
         return true
