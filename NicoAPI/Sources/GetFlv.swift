@@ -12,7 +12,7 @@ import NicoEntity
 import RxAPISchema
 import Himotoki
 
-public struct GetFlv<FlvType: Flv where FlvType: Decodable, FlvType.DecodedType == FlvType> {
+public struct GetFlv<FlvType: Flv where FlvType: Decodable> {
     
     public let id: String
     

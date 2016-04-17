@@ -17,7 +17,7 @@ import RxAPISchema
 import NicoRepository
 
 
-class VideoImpl: Object, Video, Decodable {
+final class VideoImpl: Object, Video, Decodable {
     
     dynamic var id: String = ""
     dynamic var title: String = ""
@@ -87,7 +87,11 @@ class VideoImpl: Object, Video, Decodable {
         super.init()
     }
     
-    override init(realm: RLMRealm, schema: RLMObjectSchema) {
+    required init(value: AnyObject, schema: RLMSchema) {
+        super.init(value: value, schema: schema)
+    }
+    
+    required init(realm: RLMRealm, schema: RLMObjectSchema) {
         super.init(realm: realm, schema: schema)
     }
 }

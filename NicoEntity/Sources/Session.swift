@@ -34,10 +34,14 @@ public protocol Session {
     )
 }
 
+private func cast<T>(val: Any) -> T {
+    return val as! T
+}
+
 extension NSDate: Decodable {
     
-    public static func decode(e: Extractor) throws -> NSDate {
-        return e.rawValue as! NSDate
+    public static func decode(e: Extractor) throws -> Self {
+        return cast(e.rawValue)
     }
 }
 

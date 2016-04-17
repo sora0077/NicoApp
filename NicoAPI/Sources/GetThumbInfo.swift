@@ -11,7 +11,7 @@ import NicoEntity
 import Himotoki
 import RxAPISchema
 
-public struct GetThumbInfo<VideoType: Video where VideoType: Decodable, VideoType.DecodedType == VideoType>  {
+public struct GetThumbInfo<VideoType: Video where VideoType: Decodable>  {
     
     public let videos: [String]
     

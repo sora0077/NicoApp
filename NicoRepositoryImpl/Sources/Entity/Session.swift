@@ -18,7 +18,7 @@ import QueryKit
 import NicoRepository
 
 
-class SessionImpl: Object, Session, Decodable {
+final class SessionImpl: Object, Session, Decodable {
     
     dynamic var mail_address: String = ""
     dynamic var user_session: String = ""
@@ -58,7 +58,11 @@ class SessionImpl: Object, Session, Decodable {
         super.init()
     }
     
-    override init(realm: RLMRealm, schema: RLMObjectSchema) {
+    required init(value: AnyObject, schema: RLMSchema) {
+        super.init(value: value, schema: schema)
+    }
+    
+    required init(realm: RLMRealm, schema: RLMObjectSchema) {
         super.init(realm: realm, schema: schema)
     }
 }

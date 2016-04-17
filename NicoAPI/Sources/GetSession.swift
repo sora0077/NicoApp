@@ -11,7 +11,7 @@ import NicoEntity
 import RxAPISchema
 import Himotoki
 
-public struct GetSession<SessionType: Session where SessionType: Decodable, SessionType.DecodedType == SessionType> {
+public struct GetSession<SessionType: Session where SessionType: Decodable> {
     
     public let mailaddress: String
     public let password: String

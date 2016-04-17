@@ -9,6 +9,7 @@
 import Foundation
 import NicoEntity
 import NicoAPI
+import Realm
 import RealmSwift
 import Himotoki
 import RxSwift
@@ -16,7 +17,7 @@ import RxAPISchema
 import NicoRepository
 
 
-class FlvImpl: Object, Flv, Decodable {
+final class FlvImpl: Object, Flv, Decodable {
     
     dynamic var thread_id: String = ""
     dynamic var url: String = ""
@@ -68,6 +69,14 @@ class FlvImpl: Object, Flv, Decodable {
     
     required init() {
         super.init()
+    }
+    
+    required init(value: AnyObject, schema: RLMSchema) {
+        super.init(value: value, schema: schema)
+    }
+    
+    required init(realm: RLMRealm, schema: RLMObjectSchema) {
+        super.init(realm: realm, schema: schema)
     }
 }
 

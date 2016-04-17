@@ -1,23 +1,23 @@
 PODS:
-  - Alamofire (3.3.0)
-  - Font-Awesome-Swift (1.4.6)
+  - Alamofire (3.3.1)
+  - Font-Awesome-Swift (1.4.7)
   - Fuzi (0.3.1)
-  - Himotoki (1.7.0)
+  - Himotoki (2.0.0)
   - JVFloatLabeledTextField (1.1.0)
   - KeychainAccess (2.3.5)
   - QueryKit (0.12.1)
-  - Realm (0.98.6):
-    - Realm/Headers (= 0.98.6)
-  - Realm/Headers (0.98.6)
-  - RealmSwift (0.98.6):
-    - Realm (= 0.98.6)
+  - Realm (0.98.8):
+    - Realm/Headers (= 0.98.8)
+  - Realm/Headers (0.98.8)
+  - RealmSwift (0.98.8):
+    - Realm (= 0.98.8)
   - RelayoutKit (0.1.2)
   - RxAPISchema (0.0.1):
     - Alamofire
     - RxSwift
-  - RxCocoa (2.3.1):
-    - RxSwift (~> 2.3.1)
-  - RxSwift (2.3.1)
+  - RxCocoa (2.4):
+    - RxSwift (~> 2.4)
+  - RxSwift (2.4)
   - SDWebImage (3.7.5):
     - SDWebImage/Core (= 3.7.5)
   - SDWebImage/Core (3.7.5)
@@ -61,19 +61,19 @@ CHECKOUT OPTIONS:
     :git: https://github.com/sora0077/WindowKit.git
 
 SPEC CHECKSUMS:
-  Alamofire: 9054db4a1b1ca9e363223183e01cea380159a27c
-  Font-Awesome-Swift: a965c23e619514be65de9b113f49038ca683c1bb
+  Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
+  Font-Awesome-Swift: 0131fd0f683ac024ce9abf1fdbc9fb482150ce49
   Fuzi: 25118b725a1637f1676f63ae1acbba1f30a5dd6c
-  Himotoki: a97b4a5861d6d25fc0746f0e19164eef03c19347
+  Himotoki: 77fb61dbd6cd5dae033af630b591fec383eece28
   JVFloatLabeledTextField: ea4a3d8387ddd43724c472bb2b8ab39b79af05d4
   KeychainAccess: e283c1981a6c5655e1984cd411c6faf16fa165ae
   QueryKit: 6a8dbe9f33ffac00c424143695681a949b58518d
-  Realm: 44803f35418c5d89b27825a564247fcd190de37e
-  RealmSwift: c7239c52c83f8c43525a5269ba7be1694da33afc
+  Realm: 0e293bb62999730599efc3048896bbd4f2e43bcd
+  RealmSwift: 064262d38113f23ff3508fb20a0a922e696bec01
   RelayoutKit: 7d793ac50b09b85cfbf7e4aebbf4b3f6a3f8f0eb
   RxAPISchema: a8a109fcaec0c81718fd8429076a8af2248c6d10
-  RxCocoa: a2baaf3462b989559a51dce59d78fbebb8fe0afa
-  RxSwift: 829b2843e9eddc77a02cb3f5117f0d55f8f646f1
+  RxCocoa: 7d6cd877de99f5640306b3d6cf87f580c1d91b61
+  RxSwift: 67b9ef4e8b34fb394e200e754c6a09cc16559f94
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
   SnapKit: 5fce3c1bbbf1fbd31de9aa92f33eb9fa03f15650
   Timepiece: cf53bb908bf542acc0e3d5f69cabfed869df4ebd
