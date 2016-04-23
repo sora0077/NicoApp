@@ -85,6 +85,9 @@ class PlayerViewController: UIViewController {
             print(queuePlayer.items().count)
             print(queuePlayer.currentItem)
             updateQueue()
+            if queuePlayer.currentItem == nil {
+                videoStop()
+            }
         default:
             break
         }
